@@ -33,10 +33,18 @@ const FAQ: React.FC = () => {
     },
   ];
 
-  const scrollToContact = (): void => {
-    const element = document.getElementById('contact');
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 80; // Header height
+      const offset = 20; // Additional 20px offset
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
@@ -91,7 +99,7 @@ const FAQ: React.FC = () => {
           <p className="text-gray-600 mb-6">
             Vẫn có thắc mắc? Chúng tôi sẵn sàng tư vấn miễn phí
           </p>
-          <button onClick={scrollToContact} className="btn-primary">
+          <button onClick={() => scrollToSection('contact')} className="btn-primary">
             Liên hệ tư vấn
           </button>
         </div>

@@ -1,29 +1,46 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Mail, Send, Facebook, MessageCircle, MapPin } from 'lucide-react'
-import { FormData } from '../types'
+import { useForm, ValidationError } from '@formspree/react'
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: 'llc',
-    message: ''
-  })
+  const [state, handleSubmit] = useForm("mvgrlynw")
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>): void => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+  if (state.succeeded) {
+    return (
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom" id="contact">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+              Cảm ơn bạn đã liên hệ!
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Chúng tôi đã nhận được yêu cầu của bạn và sẽ phản hồi trong vòng 24 giờ.
+            </p>
+          </div>
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong vòng 24 giờ.')
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white rounded-xl p-8 shadow-lg">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Send className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                Yêu cầu đã được gửi thành công!
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Đội ngũ chuyên gia của Sail Agency sẽ liên hệ với bạn sớm nhất có thể 
+                để tư vấn chi tiết về dịch vụ đăng ký LLC.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="btn-primary"
+              >
+                Gửi yêu cầu khác
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
   }
 
   return (
@@ -125,10 +142,14 @@ const Contact: React.FC = () => {
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="Nhập họ và tên"
+                  />
+                  <ValidationError 
+                    prefix="Name" 
+                    field="name"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1"
                   />
                 </div>
                 <div>
@@ -140,10 +161,14 @@ const Contact: React.FC = () => {
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="email@example.com"
+                  />
+                  <ValidationError 
+                    prefix="Email" 
+                    field="email"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1"
                   />
                 </div>
               </div>
@@ -157,10 +182,14 @@ const Contact: React.FC = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="+84 xxx xxx xxx"
+                  />
+                  <ValidationError 
+                    prefix="Phone" 
+                    field="phone"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1"
                   />
                 </div>
                 <div>
@@ -171,10 +200,14 @@ const Contact: React.FC = () => {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="Tên LLC dự kiến"
+                  />
+                  <ValidationError 
+                    prefix="Company" 
+                    field="company"
+                    errors={state.errors}
+                    className="text-red-500 text-sm mt-1"
                   />
                 </div>
               </div>
@@ -186,8 +219,6 @@ const Contact: React.FC = () => {
                 <select
                   id="service"
                   name="service"
-                  value={formData.service}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 >
                   <option value="llc">Đăng ký LLC</option>
@@ -195,6 +226,12 @@ const Contact: React.FC = () => {
                   <option value="itin">Hỗ trợ lấy ITIN</option>
                   <option value="consultation">Chỉ tư vấn</option>
                 </select>
+                <ValidationError 
+                  prefix="Service" 
+                  field="service"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
               <div>
@@ -205,26 +242,37 @@ const Contact: React.FC = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                   placeholder="Mô tả ngắn về dự án và câu hỏi của bạn..."
                 ></textarea>
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
               <button
                 type="submit"
-                className="w-full btn-primary flex items-center justify-center space-x-2 text-lg py-4"
+                disabled={state.submitting}
+                className="w-full btn-primary flex items-center justify-center space-x-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-5 h-5" />
-                <span>Gửi yêu cầu tư vấn</span>
+                <span>{state.submitting ? 'Đang gửi...' : 'Gửi yêu cầu tư vấn'}</span>
               </button>
+
+              {state.errors && Object.keys(state.errors).length > 0 && (
+                <div className="text-red-500 text-sm text-center">
+                  Có lỗi xảy ra. Vui lòng kiểm tra lại thông tin và thử lại.
+                </div>
+              )}
 
               <p className="text-sm text-gray-500 text-center">
                 Bằng cách gửi form, bạn đồng ý với{' '}
-                <a href="#" className="text-blue-600 hover:underline">Điều khoản sử dụng</a>
+                <a href="/terms-of-service" className="text-blue-600 hover:underline">Điều khoản sử dụng</a>
                 {' '}và{' '}
-                <a href="#" className="text-blue-600 hover:underline">Chính sách bảo mật</a>
+                <a href="/privacy-policy" className="text-blue-600 hover:underline">Chính sách bảo mật</a>
               </p>
             </form>
           </div>
