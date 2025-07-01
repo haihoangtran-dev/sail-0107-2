@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
                 <Facebook className="w-5 h-5" />
               </a>
               <a 
-                href="https://t.me/sailagency" 
+                href="https://t.me/sail_agency" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
@@ -168,12 +168,12 @@ const Footer: React.FC = () => {
                 <MessageCircle className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <a 
-                    href="https://t.me/sailagency" 
+                    href="https://t.me/sail_agency" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    t.me/sailagency
+                    t.me/sail_agency
                   </a>
                 </div>
               </div>
