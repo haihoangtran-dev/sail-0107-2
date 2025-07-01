@@ -276,7 +276,7 @@ const Header: React.FC = () => {
                 onClick={() => scrollToSection('pricing')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
               >
-                Giá cả
+                Bảng giá
               </button>
               <button
                 onClick={() => handleNavigation('/blog')}
