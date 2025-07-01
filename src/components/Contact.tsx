@@ -99,12 +99,12 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-blue-900 mb-1">Telegram</h4>
                     <a 
-                      href="https://t.me/sailagency" 
+                      href="https://t.me/sail_agency" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:text-blue-700 hover:underline"
                     >
-                      t.me/sailagency
+                      t.me/sail_agency
                     </a>
                   </div>
                 </div>
