@@ -2,17 +2,18 @@ import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
 const Hero: React.FC = () => {
-  const scrollToContact = (): void => {
-    const element = document.getElementById('contact')
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
+      const headerHeight = 80 // Header height
+      const offset = 20 // Additional 20px offset
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset
 
-  const scrollToPricing = (): void => {
-    const element = document.getElementById('pricing')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -52,14 +53,14 @@ const Hero: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
-                onClick={scrollToContact}
+                onClick={() => scrollToSection('contact')}
                 className="btn-primary flex items-center justify-center space-x-2 group"
               >
                 <span>Bắt đầu ngay</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
-                onClick={scrollToPricing}
+                onClick={() => scrollToSection('pricing')}
                 className="btn-secondary"
               >
                 Xem bảng giá
