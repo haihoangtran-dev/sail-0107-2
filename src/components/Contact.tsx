@@ -262,7 +262,7 @@ const Contact: React.FC = () => {
                 <span>{state.submitting ? 'Đang gửi...' : 'Gửi yêu cầu tư vấn'}</span>
               </button>
 
-              {state.errors && state.errors.length > 0 && (
+              {state.errors && Object.keys(state.errors).length > 0 && (
                 <div className="text-red-500 text-sm text-center">
                   Có lỗi xảy ra. Vui lòng kiểm tra lại thông tin và thử lại.
                 </div>
