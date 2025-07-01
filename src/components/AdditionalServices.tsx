@@ -12,10 +12,18 @@ import {
 } from 'lucide-react'
 
 const AdditionalServices: React.FC = () => {
-  const scrollToContact = (): void => {
-    const element = document.getElementById('contact')
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const headerHeight = 80 // Header height
+      const offset = 20 // Additional 20px offset
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -146,7 +154,7 @@ const AdditionalServices: React.FC = () => {
               {/* Tax Consulting Button */}
               <div className="mt-8">
                 <button 
-                  onClick={scrollToContact}
+                  onClick={() => scrollToSection('contact')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-center"
                 >
                   Đặt lịch tư vấn thuế
@@ -230,7 +238,7 @@ const AdditionalServices: React.FC = () => {
               {/* ITIN Button */}
               <div className="mt-8">
                 <button 
-                  onClick={scrollToContact}
+                  onClick={() => scrollToSection('contact')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-center"
                 >
                   Bắt đầu xin ITIN
@@ -301,7 +309,7 @@ const AdditionalServices: React.FC = () => {
             Đội ngũ chuyên gia sẽ hỗ trợ bạn từ A đến Z.
           </p>
           <button 
-            onClick={scrollToContact}
+            onClick={() => scrollToSection('contact')}
             className="btn-primary text-lg px-8 py-4"
           >
             Tư vấn miễn phí ngay

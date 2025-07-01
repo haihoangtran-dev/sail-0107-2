@@ -46,10 +46,18 @@ const Pricing: React.FC = () => {
     }
   ]
 
-  const scrollToContact = (): void => {
-    const element = document.getElementById('contact')
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const headerHeight = 80 // Header height
+      const offset = 20 // Additional 20px offset
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -124,7 +132,7 @@ const Pricing: React.FC = () => {
                   </div>
 
                   <button 
-                    onClick={scrollToContact}
+                    onClick={() => scrollToSection('contact')}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                       service.popular
                         ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'

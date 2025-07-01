@@ -27,10 +27,18 @@ const Process: React.FC = () => {
     }
   ]
 
-  const scrollToContact = (): void => {
-    const element = document.getElementById('contact')
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      const headerHeight = 80 // Header height
+      const offset = 20 // Additional 20px offset
+      const elementPosition = element.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight - offset
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -96,7 +104,7 @@ const Process: React.FC = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <button 
-            onClick={scrollToContact}
+            onClick={() => scrollToSection('contact')}
             className="btn-primary text-lg px-8 py-4"
           >
             Bắt đầu quy trình ngay
