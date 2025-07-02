@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a 
                 href="mailto:ask@sailagency.co"
-                className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 title="Email"
               >
                 <Mail className="w-5 h-5" />
@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 href="https://fb.com/sailagency" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 title="Facebook"
               >
                 <Facebook className="w-5 h-5" />
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                 href="https://t.me/sail_agency" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-blue-800 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
+                className="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
                 title="Telegram"
               >
                 <MessageCircle className="w-5 h-5" />
