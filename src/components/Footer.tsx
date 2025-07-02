@@ -133,7 +133,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">
+                  <p className="">
                     12770 Coit Road, Suite 208<br />
                     Dallas, Texas, US
                   </p>
