@@ -133,8 +133,8 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-6 leading-tight">
-                Về <span className="text-blue-600">Sail Agency </span>
+              <h1 className="text-4xl lg:text-6xl font-bold text-blue-600 mb-6 leading-tight">
+                Về Sail Agency
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Chúng tôi là đối tác tin cậy giúp doanh nghiệp Việt Nam và quốc
@@ -332,9 +332,10 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          <div className="relative">
+          {/* Desktop Timeline */}
+          <div className="relative hidden lg:block">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200 hidden lg:block"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-blue-200"></div>
 
             <div className="space-y-12">
               {milestones.map((milestone, index) => (
@@ -363,11 +364,41 @@ const About: React.FC = () => {
                   </div>
 
                   {/* Timeline dot */}
-                  <div className="hidden lg:block w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                  <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg relative z-10"></div>
 
                   <div className="flex-1"></div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Mobile Timeline */}
+          <div className="lg:hidden">
+            <div className="relative">
+              {/* Mobile timeline line */}
+              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+              
+              <div className="space-y-8">
+                {milestones.map((milestone, index) => (
+                  <div key={index} className="relative flex items-start">
+                    {/* Timeline dot */}
+                    <div className="absolute left-4 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+                    
+                    {/* Content */}
+                    <div className="ml-12 bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+                      <div className="text-xl font-bold text-blue-600 mb-2">
+                        {milestone.year}
+                      </div>
+                      <h3 className="text-lg font-semibold text-blue-900 mb-3">
+                        {milestone.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-sm">
+                        {milestone.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

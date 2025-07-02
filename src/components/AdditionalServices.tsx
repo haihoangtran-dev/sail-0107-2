@@ -95,7 +95,7 @@ const AdditionalServices: React.FC = () => {
           {/* Tax Consulting Service */}
           <div id="tax-consulting" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-white">
+            <div className="bg-blue-600 p-8 text-white">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                   <Calculator className="w-8 h-8 text-white" />
@@ -166,7 +166,7 @@ const AdditionalServices: React.FC = () => {
           {/* ITIN Service */}
           <div id="itin-support" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
-            <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-8 text-white">
+            <div className="bg-blue-600 p-8 text-white">
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
                   <CreditCard className="w-8 h-8 text-white" />
