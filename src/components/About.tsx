@@ -133,8 +133,8 @@ const About: React.FC = () => {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl lg:text-6xl font-bold text-blue-900 mb-6 leading-tight">
-                Về <span className="text-blue-600">Sail Agency </span>
+              <h1 className="text-4xl lg:text-6xl font-bold text-blue-600 mb-6 leading-tight">
+                Về Sail Agency
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Chúng tôi là đối tác tin cậy giúp doanh nghiệp Việt Nam và quốc
