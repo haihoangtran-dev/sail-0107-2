@@ -158,7 +158,7 @@ const About: React.FC = () => {
             </div>
             <div className="relative">
               <img
-                src="images/about/about.png"
+                src="images/about/about2.png"
                 alt="Sail Agency team"
                 className="rounded-2xl shadow-2xl"
               />
