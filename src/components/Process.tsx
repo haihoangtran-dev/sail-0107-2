@@ -22,7 +22,7 @@ const Process: React.FC = () => {
       icon: CheckCircle,
       title: 'Nhận tài liệu LLC',
       description: 'Nhận đầy đủ tài liệu pháp lý và hướng dẫn vận hành LLC',
-      details: ['Certificate of Formation', 'Operating Agreement','Operating Agreement','EIN Number'],
+      details: ['Articles of Organization', 'Certificate of Formation','Operating Agreement','EIN Number'],
       image: 'images/process/receive-document.png'
     }
   ]
