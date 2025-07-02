@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 <span className="text-xl font-bold">Sail Agency</span>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="mb-6 leading-relaxed">
               Dịch vụ đăng ký LLC chuyên nghiệp tại Mỹ. Chúng tôi giúp bạn khởi nghiệp 
               một cách nhanh chóng, an toàn và tuân thủ pháp luật.
             </p>
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={scrollToProcess}
-                  className="text-gray-300 hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left"
                 >
                   Đăng ký LLC
                 </button>
@@ -97,7 +97,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={scrollToTaxConsulting}
-                  className="text-gray-300 hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left"
                 >
                   Tư vấn thuế doanh nghiệp
                 </button>
@@ -105,7 +105,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={scrollToItinSupport}
-                  className="text-gray-300 hover:text-white transition-colors text-left"
+                  className="hover:text-white transition-colors text-left"
                 >
                   Hỗ trợ lấy ITIN
                 </button>
@@ -117,12 +117,12 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Thông tin</h3>
             <ul className="space-y-3">
-              <li><a href="/about" className="text-gray-300 hover:text-white transition-colors">Về chúng tôi</a></li>
-              <li><a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Câu hỏi thường gặp</a></li>
-              <li><a href="/terms-of-service" className="text-gray-300 hover:text-white transition-colors">Điều khoản và Điều kiện</a></li>
-              <li><a href="/refund-policy" className="text-gray-300 hover:text-white transition-colors">Thanh toán và hoàn trả</a></li>
-              <li><a href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Bảo mật và quyền riêng tư</a></li>
+              <li><a href="/about" className="hover:text-white transition-colors">Về chúng tôi</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Câu hỏi thường gặp</a></li>
+              <li><a href="/terms-of-service" className="hover:text-white transition-colors">Điều khoản và Điều kiện</a></li>
+              <li><a href="/refund-policy" className="hover:text-white transition-colors">Thanh toán và hoàn trả</a></li>
+              <li><a href="/privacy-policy" className="hover:text-white transition-colors">Bảo mật và quyền riêng tư</a></li>
             </ul>
           </div>
 
@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
                 <div>
                   <a 
                     href="mailto:ask@sailagency.co"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="hover:text-white transition-colors"
                   >
                     ask@sailagency.co
                   </a>
@@ -158,7 +158,7 @@ const Footer: React.FC = () => {
                     href="https://fb.com/sailagency" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="hover:text-white transition-colors"
                   >
                     fb.com/sailagency
                   </a>
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
                     href="https://t.me/sail_agency" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="hover:text-white transition-colors"
                   >
                     t.me/sail_agency
                   </a>
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-blue-800 py-8">
+        <div className="py-4">
           <div className="flex flex-col justify-between items-center space-y-4 lg:space-y-0">
             <div className="text-gray-400 text-sm">
               Copyright {currentYear} © Sail Agency
