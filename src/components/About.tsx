@@ -85,25 +85,25 @@ const About: React.FC = () => {
       year: '2019',
       title: 'Thành lập Sail Agency',
       description:
-        'Bắt đầu với sứ mệnh giúp doanh nghiệp Việt Nam mở rộng ra thị trường Mỹ',
+        'Khởi đầu từ ý tưởng đơn giản nhưng đầy tham vọng: giúp các doanh nghiệp Việt Nam tiếp cận thị trường Mỹ một cách dễ dàng và hiệu quả. Với kinh nghiệm sâu rộng trong lĩnh vực pháp lý và kinh doanh quốc tế, đội ngũ sáng lập đã nhận ra những khó khăn mà các doanh nghiệp Việt gặp phải khi muốn mở rộng ra nước ngoài. Từ đó, Sail Agency ra đời với sứ mệnh trở thành cầu nối tin cậy, giúp doanh nghiệp Việt Nam vượt qua rào cản pháp lý và hành chính để thành công tại thị trường Mỹ.',
     },
     {
       year: '2020',
       title: '100 LLC đầu tiên',
       description:
-        'Đạt mốc 100 LLC được đăng ký thành công, khẳng định chất lượng dịch vụ',
+        'Năm 2020 đánh dấu cột mốc quan trọng khi Sail Agency hoàn thành thành công 100 LLC đầu tiên. Đây không chỉ là con số, mà còn là minh chứng cho chất lượng dịch vụ và sự tin tưởng của khách hàng. Mỗi LLC được đăng ký đều đi kèm với câu chuyện thành công riêng - từ startup công nghệ đến doanh nghiệp thương mại điện tử, từ công ty tư vấn đến doanh nghiệp sản xuất. Thành công này đã khẳng định vị thế của Sail Agency trong ngành và tạo nền tảng vững chắc cho sự phát triển tiếp theo.',
     },
     {
       year: '2022',
       title: 'Mở rộng dịch vụ',
       description:
-        'Bổ sung dịch vụ tư vấn thuế và hỗ trợ mở tài khoản ngân hàng',
+        'Nhận thấy nhu cầu ngày càng đa dạng của khách hàng, Sail Agency đã mở rộng danh mục dịch vụ với việc bổ sung tư vấn thuế chuyên sâu và hỗ trợ mở tài khoản ngân hàng. Đây là bước tiến quan trọng giúp khách hàng có được giải pháp toàn diện từ A đến Z. Dịch vụ tư vấn thuế không chỉ giúp doanh nghiệp tuân thủ đúng quy định mà còn tối ưu hóa chi phí và lợi nhuận. Việc hỗ trợ mở tài khoản ngân hàng giúp khách hàng dễ dàng quản lý tài chính và thực hiện các giao dịch kinh doanh tại Mỹ một cách thuận lợi.',
     },
     {
       year: '2024',
-      title: '200+ LLC',
+      title: '200+ LLC và tầm nhìn tương lai',
       description:
-        'Trở thành đối tác tin cậy của hơn 200 doanh nghiệp trên toàn thế giới',
+        'Với hơn 200 LLC được đăng ký thành công, Sail Agency đã trở thành đối tác tin cậy của các doanh nghiệp không chỉ từ Việt Nam mà còn từ nhiều quốc gia khác trong khu vực Đông Nam Á. Thành tựu này không chỉ phản ánh sự tăng trưởng về số lượng mà còn thể hiện chất lượng dịch vụ ngày càng hoàn thiện. Năm 2024 cũng đánh dấu việc Sail Agency đầu tư mạnh mẽ vào công nghệ, xây dựng nền tảng số hóa quy trình để mang đến trải nghiệm tốt hơn cho khách hàng và chuẩn bị cho giai đoạn phát triển tiếp theo.',
     },
   ];
 
@@ -350,11 +350,11 @@ const About: React.FC = () => {
                       index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'
                     }`}
                   >
-                    <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
                       <div className="text-2xl font-bold text-blue-600 mb-2">
                         {milestone.year}
                       </div>
-                      <h3 className="text-xl font-semibold text-blue-900 mb-3">
+                      <h3 className="text-xl font-semibold text-blue-900 mb-4">
                         {milestone.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
