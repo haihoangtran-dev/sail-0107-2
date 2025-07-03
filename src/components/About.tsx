@@ -85,25 +85,25 @@ const About: React.FC = () => {
       year: '2019',
       title: 'Thành lập Sail Agency',
       description:
-        'Bắt đầu với sứ mệnh giúp doanh nghiệp Việt Nam mở rộng ra thị trường Mỹ',
+        'Khởi đầu từ ý tưởng giúp doanh nghiệp Việt Nam tiếp cận thị trường Mỹ. Với kinh nghiệm sâu rộng trong lĩnh vực pháp lý và kinh doanh quốc tế, đội ngũ sáng lập nhận ra những khó khăn mà doanh nghiệp Việt gặp phải khi mở rộng ra nước ngoài. Sail Agency ra đời với sứ mệnh trở thành cầu nối tin cậy.',
     },
     {
       year: '2020',
       title: '100 LLC đầu tiên',
       description:
-        'Đạt mốc 100 LLC được đăng ký thành công, khẳng định chất lượng dịch vụ',
+        'Năm 2020 đánh dấu cột mốc quan trọng khi hoàn thành thành công 100 LLC đầu tiên. Đây không chỉ là con số mà còn là minh chứng cho chất lượng dịch vụ và sự tin tưởng của khách hàng. Mỗi LLC đều đi kèm với câu chuyện thành công riêng từ startup công nghệ đến doanh nghiệp thương mại điện tử.',
     },
     {
       year: '2022',
       title: 'Mở rộng dịch vụ',
       description:
-        'Bổ sung dịch vụ tư vấn thuế và hỗ trợ mở tài khoản ngân hàng',
+        'Nhận thấy nhu cầu ngày càng đa dạng của khách hàng, Sail Agency mở rộng danh mục dịch vụ với tư vấn thuế chuyên sâu và hỗ trợ mở tài khoản ngân hàng. Đây là bước tiến quan trọng giúp khách hàng có giải pháp toàn diện từ A đến Z, tối ưu hóa chi phí và quản lý tài chính hiệu quả.',
     },
     {
       year: '2024',
-      title: '200+ LLC',
+      title: '200+ LLC và tầm nhìn tương lai',
       description:
-        'Trở thành đối tác tin cậy của hơn 200 doanh nghiệp trên toàn thế giới',
+        'Với hơn 200 LLC được đăng ký thành công, Sail Agency trở thành đối tác tin cậy của doanh nghiệp không chỉ từ Việt Nam mà còn từ nhiều quốc gia khác trong khu vực Đông Nam Á. Năm 2024 đánh dấu việc đầu tư mạnh vào công nghệ, xây dựng nền tảng số hóa quy trình để chuẩn bị cho giai đoạn phát triển tiếp theo.',
     },
   ];
 
@@ -350,14 +350,14 @@ const About: React.FC = () => {
                       index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'
                     }`}
                   >
-                    <div className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
                       <div className="text-2xl font-bold text-blue-600 mb-2">
                         {milestone.year}
                       </div>
-                      <h3 className="text-xl font-semibold text-blue-900 mb-3">
+                      <h3 className="text-xl font-semibold text-blue-900 mb-4">
                         {milestone.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed text-justify">
                         {milestone.description}
                       </p>
                     </div>
@@ -392,7 +392,7 @@ const About: React.FC = () => {
                       <h3 className="text-lg font-semibold text-blue-900 mb-3">
                         {milestone.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
+                      <p className="text-gray-600 leading-relaxed text-sm text-justify">
                         {milestone.description}
                       </p>
                     </div>
