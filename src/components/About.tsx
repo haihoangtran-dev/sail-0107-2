@@ -85,25 +85,25 @@ const About: React.FC = () => {
       year: '2019',
       title: 'Thành lập Sail Agency',
       description:
-        'Khởi đầu từ ý tưởng đơn giản nhưng đầy tham vọng: giúp các doanh nghiệp Việt Nam tiếp cận thị trường Mỹ một cách dễ dàng và hiệu quả. Với kinh nghiệm sâu rộng trong lĩnh vực pháp lý và kinh doanh quốc tế, đội ngũ sáng lập đã nhận ra những khó khăn mà các doanh nghiệp Việt gặp phải khi muốn mở rộng ra nước ngoài. Từ đó, Sail Agency ra đời với sứ mệnh trở thành cầu nối tin cậy, giúp doanh nghiệp Việt Nam vượt qua rào cản pháp lý và hành chính để thành công tại thị trường Mỹ.',
+        'Khởi đầu từ ý tưởng giúp doanh nghiệp Việt Nam tiếp cận thị trường Mỹ. Với kinh nghiệm sâu rộng trong lĩnh vực pháp lý và kinh doanh quốc tế, đội ngũ sáng lập nhận ra những khó khăn mà doanh nghiệp Việt gặp phải khi mở rộng ra nước ngoài. Sail Agency ra đời với sứ mệnh trở thành cầu nối tin cậy.',
     },
     {
       year: '2020',
       title: '100 LLC đầu tiên',
       description:
-        'Năm 2020 đánh dấu cột mốc quan trọng khi Sail Agency hoàn thành thành công 100 LLC đầu tiên. Đây không chỉ là con số, mà còn là minh chứng cho chất lượng dịch vụ và sự tin tưởng của khách hàng. Mỗi LLC được đăng ký đều đi kèm với câu chuyện thành công riêng - từ startup công nghệ đến doanh nghiệp thương mại điện tử, từ công ty tư vấn đến doanh nghiệp sản xuất. Thành công này đã khẳng định vị thế của Sail Agency trong ngành và tạo nền tảng vững chắc cho sự phát triển tiếp theo.',
+        'Năm 2020 đánh dấu cột mốc quan trọng khi hoàn thành thành công 100 LLC đầu tiên. Đây không chỉ là con số mà còn là minh chứng cho chất lượng dịch vụ và sự tin tưởng của khách hàng. Mỗi LLC đều đi kèm với câu chuyện thành công riêng từ startup công nghệ đến doanh nghiệp thương mại điện tử.',
     },
     {
       year: '2022',
       title: 'Mở rộng dịch vụ',
       description:
-        'Nhận thấy nhu cầu ngày càng đa dạng của khách hàng, Sail Agency đã mở rộng danh mục dịch vụ với việc bổ sung tư vấn thuế chuyên sâu và hỗ trợ mở tài khoản ngân hàng. Đây là bước tiến quan trọng giúp khách hàng có được giải pháp toàn diện từ A đến Z. Dịch vụ tư vấn thuế không chỉ giúp doanh nghiệp tuân thủ đúng quy định mà còn tối ưu hóa chi phí và lợi nhuận. Việc hỗ trợ mở tài khoản ngân hàng giúp khách hàng dễ dàng quản lý tài chính và thực hiện các giao dịch kinh doanh tại Mỹ một cách thuận lợi.',
+        'Nhận thấy nhu cầu ngày càng đa dạng của khách hàng, Sail Agency mở rộng danh mục dịch vụ với tư vấn thuế chuyên sâu và hỗ trợ mở tài khoản ngân hàng. Đây là bước tiến quan trọng giúp khách hàng có giải pháp toàn diện từ A đến Z, tối ưu hóa chi phí và quản lý tài chính hiệu quả.',
     },
     {
       year: '2024',
       title: '200+ LLC và tầm nhìn tương lai',
       description:
-        'Với hơn 200 LLC được đăng ký thành công, Sail Agency đã trở thành đối tác tin cậy của các doanh nghiệp không chỉ từ Việt Nam mà còn từ nhiều quốc gia khác trong khu vực Đông Nam Á. Thành tựu này không chỉ phản ánh sự tăng trưởng về số lượng mà còn thể hiện chất lượng dịch vụ ngày càng hoàn thiện. Năm 2024 cũng đánh dấu việc Sail Agency đầu tư mạnh mẽ vào công nghệ, xây dựng nền tảng số hóa quy trình để mang đến trải nghiệm tốt hơn cho khách hàng và chuẩn bị cho giai đoạn phát triển tiếp theo.',
+        'Với hơn 200 LLC được đăng ký thành công, Sail Agency trở thành đối tác tin cậy của doanh nghiệp không chỉ từ Việt Nam mà còn từ nhiều quốc gia khác trong khu vực Đông Nam Á. Năm 2024 đánh dấu việc đầu tư mạnh vào công nghệ, xây dựng nền tảng số hóa quy trình để chuẩn bị cho giai đoạn phát triển tiếp theo.',
     },
   ];
 
@@ -357,7 +357,7 @@ const About: React.FC = () => {
                       <h3 className="text-xl font-semibold text-blue-900 mb-4">
                         {milestone.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 leading-relaxed text-justify">
                         {milestone.description}
                       </p>
                     </div>
@@ -392,7 +392,7 @@ const About: React.FC = () => {
                       <h3 className="text-lg font-semibold text-blue-900 mb-3">
                         {milestone.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed text-sm">
+                      <p className="text-gray-600 leading-relaxed text-sm text-justify">
                         {milestone.description}
                       </p>
                     </div>
