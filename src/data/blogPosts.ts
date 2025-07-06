@@ -76,7 +76,7 @@ LLC có nghĩa vụ tuân thủ các quy định thuế ở cả cấp liên ban
 
 ## Báo cáo thuế liên bang (Federal Tax Return)
 
-#### LLC được phân loại là Corporation
+##### LLC được phân loại là Corporation
 Nếu LLC elect để được đánh thuế như Corporation, bạn phải:
 
 - **Nộp Form 1120** (U.S. Corporation Income Tax Return)
