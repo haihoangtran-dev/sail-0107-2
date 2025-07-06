@@ -68,8 +68,6 @@ Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt
       'Tìm hiểu cách LLC được đánh thuế tại Mỹ, sự khác biệt giữa Single-Member và Multi-Member LLC, và các lựa chọn thuế khác nhau.',
     content: `Một trong những lợi ích lớn nhất của LLC là tính linh hoạt trong việc lựa chọn cách thức đánh thuế. Hiểu rõ các tùy chọn này sẽ giúp bạn tối ưu hóa nghĩa vụ thuế của mình.
 
-![Tax Planning](https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800)
-
 ## LLC và Pass-Through Taxation
 
 Theo mặc định, LLC sử dụng "pass-through taxation", có nghĩa là:
@@ -98,8 +96,6 @@ Nếu SMLLC có lợi nhuận $50,000:
 - Nộp Form 1065 (thông tin)
 - Mỗi thành viên nhận Schedule K-1
 - Thành viên báo cáo trên tờ khai cá nhân
-
-![Multi Member LLC](https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Phân bổ lợi nhuận:
 - Theo tỷ lệ sở hữu (mặc định)
@@ -134,8 +130,6 @@ Nếu SMLLC có lợi nhuận $50,000:
 #### 3. Health Savings Account (HSA)
 - Deduction cho self-employed
 - Triple tax advantage
-
-![Tax Optimization](https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## Lưu ý quan trọng
 
