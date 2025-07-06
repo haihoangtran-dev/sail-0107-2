@@ -10,6 +10,8 @@ export const blogPosts: BlogPost[] = [
       'Delaware là bang được nhiều doanh nghiệp lựa chọn để đăng ký LLC. Tìm hiểu lý do tại sao và quy trình đăng ký chi tiết.',
     content: `Delaware được biết đến là "thiên đường" cho việc đăng ký doanh nghiệp tại Mỹ. Với hệ thống pháp luật doanh nghiệp hoàn thiện và tòa án chuyên biệt, Delaware thu hút hàng nghìn LLC mới mỗi năm.
 
+![Delaware State Capitol](https://images.pexels.com/photos/8112199/pexels-photo-8112199.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Tại sao chọn Delaware?
 
 ##### 1. Hệ thống pháp luật ưu việt
@@ -17,6 +19,8 @@ Delaware có Court of Chancery - tòa án chuyên xử các vụ việc doanh ng
 
 ##### 2. Bảo mật thông tin cao
 Delaware không yêu cầu công khai tên của các thành viên LLC, giúp bảo vệ quyền riêng tư của chủ sở hữu.
+
+![Business Privacy](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ##### 3. Không có thuế bán hàng
 Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho các doanh nghiệp bán lẻ.
@@ -27,6 +31,8 @@ Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho c
 - Tên phải kết thúc bằng "LLC" hoặc "Limited Liability Company"
 - Kiểm tra tính khả dụng trên website của Delaware Division of Corporations
 - Tên không được trùng với các LLC đã đăng ký
+
+![Business Name Selection](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ##### Bước 2: Chỉ định Registered Agent
 Registered Agent phải có địa chỉ tại Delaware và sẵn sàng nhận tài liệu pháp lý trong giờ hành chính.
@@ -39,6 +45,8 @@ Registered Agent phải có địa chỉ tại Delaware và sẵn sàng nhận t
 ##### Bước 4: Tạo Operating Agreement
 Mặc dù không bắt buộc, Operating Agreement giúp xác định rõ quyền và nghĩa vụ của các thành viên.
 
+![Legal Documents](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Chi phí duy trì hàng năm
 
 - Annual Report: $300/năm
@@ -47,8 +55,10 @@ Mặc dù không bắt buộc, Operating Agreement giúp xác định rõ quyề
 
 ## Kết luận
 
-Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.`,
-    author: 'Nguyễn Minh Anh',
+Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.
+
+![Success in Business](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)`,
+    author: 'Sail Agency',
     publishDate: '2024-01-15',
     category: 'LLC tại Mỹ',
     tags: ['Delaware', 'LLC', 'Đăng ký doanh nghiệp'],
@@ -64,6 +74,8 @@ Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt
       'Tìm hiểu cách LLC được đánh thuế tại Mỹ, sự khác biệt giữa Single-Member và Multi-Member LLC, và các lựa chọn thuế khác nhau.',
     content: `Một trong những lợi ích lớn nhất của LLC là tính linh hoạt trong việc lựa chọn cách thức đánh thuế. Hiểu rõ các tùy chọn này sẽ giúp bạn tối ưu hóa nghĩa vụ thuế của mình.
 
+![Tax Planning](https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## LLC và Pass-Through Taxation
 
 Theo mặc định, LLC sử dụng "pass-through taxation", có nghĩa là:
@@ -78,6 +90,8 @@ Theo mặc định, LLC sử dụng "pass-through taxation", có nghĩa là:
 - Báo cáo thu nhập trên Schedule C của Form 1040
 - Phải nộp Self-Employment Tax (15.3%)
 
+![Single Member LLC](https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Ví dụ:
 Nếu SMLLC có lợi nhuận $50,000:
 - Income Tax: theo tax bracket cá nhân
@@ -90,6 +104,8 @@ Nếu SMLLC có lợi nhuận $50,000:
 - Nộp Form 1065 (thông tin)
 - Mỗi thành viên nhận Schedule K-1
 - Thành viên báo cáo trên tờ khai cá nhân
+
+![Multi Member LLC](https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Phân bổ lợi nhuận:
 - Theo tỷ lệ sở hữu (mặc định)
@@ -107,6 +123,8 @@ Nếu SMLLC có lợi nhuận $50,000:
 - Double taxation
 - Phù hợp khi muốn giữ lại lợi nhuận trong công ty
 
+![Tax Elections](https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Chiến lược tối ưu thuế
 
 #### 1. Theo dõi chi phí kinh doanh
@@ -122,6 +140,8 @@ Nếu SMLLC có lợi nhuận $50,000:
 #### 3. Health Savings Account (HSA)
 - Deduction cho self-employed
 - Triple tax advantage
+
+![Tax Optimization](https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## Lưu ý quan trọng
 
@@ -143,8 +163,10 @@ Việc lựa chọn cách thức đánh thuế cho LLC cần được cân nhắ
 - Kế hoạch phân phối lợi nhuận
 - Chiến lược phát triển dài hạn
 
+![Tax Consultation](https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa ra quyết định phù hợp nhất.`,
-    author: 'Trần Văn Hùng',
+    author: 'Sail Agency',
     publishDate: '2024-01-10',
     category: 'Thuế cho LLC',
     tags: ['Thuế', 'LLC', 'IRS', 'Tax Planning'],
@@ -161,6 +183,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
       'Phân tích chi tiết ưu nhược điểm của 3 bang phổ biến nhất để đăng ký LLC: Wyoming, Nevada và Delaware.',
     content: `Khi quyết định đăng ký LLC, việc chọn bang phù hợp là một trong những quyết định quan trọng nhất. Ba bang được lựa chọn nhiều nhất là Wyoming, Nevada và Delaware, mỗi bang có những ưu điểm riêng.
 
+![US States Map](https://images.pexels.com/photos/87611/earth-blue-planet-globe-planet-87611.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Wyoming - "The Cowboy State"
 
 #### Ưu điểm:
@@ -169,6 +193,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - **Không có thuế thu nhập cá nhân và doanh nghiệp**
 - **Charging Order Protection mạnh**: Bảo vệ tài sản LLC tốt nhất
 - **Quy trình đơn giản**: Ít giấy tờ hành chính
+
+![Wyoming Landscape](https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Nhược điểm:
 - Ít được biết đến trong giới đầu tư
@@ -189,6 +215,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - **Không yêu cầu audit hàng năm**
 - **Thân thiện với business**
 
+![Nevada Business](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Nhược điểm:
 - Chi phí cao hơn Wyoming ($425 initial filing)
 - Yêu cầu Nevada Business License ($500/năm)
@@ -208,6 +236,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - **Flexible business laws**
 - **Không có sales tax**
 
+![Delaware Business Court](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Nhược điểm:
 - Chi phí cao ($90 filing + $300 annual tax)
 - Franchise tax phức tạp
@@ -219,6 +249,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - Multi-state operations
 
 ## So sánh chi tiết
+
+![Cost Comparison](https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Chi phí đăng ký:
 - Wyoming: $100
@@ -234,6 +266,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - Wyoming: 1-2 ngày làm việc
 - Nevada: 1-3 ngày làm việc  
 - Delaware: 7-10 ngày làm việc
+
+![Privacy Protection](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Bảo mật:
 - Wyoming: ⭐⭐⭐⭐⭐ (Tốt nhất)
@@ -262,6 +296,8 @@ Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa 
 - Cần credibility với investors/lenders
 - Business có quy mô lớn hoặc multi-state
 
+![Business Decision](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Lưu ý quan trọng
 
 Dù đăng ký LLC ở bang nào, bạn vẫn phải:
@@ -270,7 +306,7 @@ Dù đăng ký LLC ở bang nào, bạn vẫn phải:
 - Maintain registered agent tại bang đăng ký
 
 Việc lựa chọn bang phù hợp phụ thuộc vào mục tiêu cụ thể của từng business. Khuyến nghị tham khảo ý kiến chuyên gia trước khi quyết định.`,
-    author: 'Lê Thị Mai',
+    author: 'Sail Agency',
     publishDate: '2024-01-05',
     category: 'LLC tại Mỹ',
     tags: ['Wyoming', 'Nevada', 'Delaware', 'So sánh', 'LLC'],
@@ -286,6 +322,8 @@ Việc lựa chọn bang phù hợp phụ thuộc vào mục tiêu cụ thể c�
       'Operating Agreement là tài liệu quan trọng nhất của LLC. Tìm hiểu tại sao bạn cần có và các điều khoản cần thiết phải bao gồm.',
     content: `Operating Agreement là "hiến pháp" của LLC, quy định cách thức hoạt động và quản lý công ty. Mặc dù hầu hết các bang không bắt buộc, việc có Operating Agreement là cực kỳ quan trọng.
 
+![Operating Agreement](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Tại sao cần Operating Agreement?
 
 #### 1. Bảo vệ Limited Liability Status
@@ -293,6 +331,8 @@ Không có Operating Agreement, LLC có thể bị coi như sole proprietorship 
 
 #### 2. Tránh Default State Rules
 Mỗi bang có quy định mặc định cho LLC. Operating Agreement cho phép bạn tùy chỉnh theo nhu cầu cụ thể.
+
+![Legal Protection](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### 3. Ngăn ngừa tranh chấp
 Quy định rõ ràng về quyền và nghĩa vụ giúp tránh xung đột giữa các thành viên.
@@ -308,6 +348,8 @@ Các tổ chức tài chính thường yêu cầu Operating Agreement khi mở t
 - Thời hạn hoạt động
 - Registered Agent
 
+![Business Information](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### 2. Thành viên và quyền sở hữu
 - Danh sách thành viên
 - Tỷ lệ sở hữu (membership interests)
@@ -319,6 +361,8 @@ Các tổ chức tài chính thường yêu cầu Operating Agreement khi mở t
 - Quyền hạn của managers
 - Quy trình ra quyết định
 - Voting rights và procedures
+
+![Management Structure](https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### 4. Phân phối lợi nhuận và lỗ
 - Cách tính toán và phân phối profits/losses
@@ -338,6 +382,8 @@ Các tổ chức tài chính thường yêu cầu Operating Agreement khi mở t
 - Valuation methods
 - Approval requirements
 
+![Financial Planning](https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### 7. Dissolution và winding up
 - Events triggering dissolution
 - Winding up procedures
@@ -351,6 +397,8 @@ Các tổ chức tài chính thường yêu cầu Operating Agreement khi mở t
 - Tập trung vào asset protection
 - Succession planning
 - Tax elections
+
+![Single Member](https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Multi-Member LLC Operating Agreement:
 - Phức tạp hơn, cần nhiều điều khoản
@@ -371,12 +419,14 @@ Các tổ chức tài chính thường yêu cầu Operating Agreement khi mở t
 - Geographic limitations
 - Remedies for breach
 
+![Legal Compliance](https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### 3. Dispute Resolution
 - Mediation requirements
 - Arbitration clauses
 - Governing law
 
-## L��i thường gặp
+## Lỗi thường gặp
 
 #### 1. Sử dụng template không phù hợp
 Mỗi LLC có nhu cầu riêng, template generic có thể không đáp ứng được.
@@ -389,6 +439,8 @@ Cần đảm bảo consistency giữa các điều khoản và với Articles of
 
 #### 4. Không xem xét tax implications
 Các điều khoản về allocation và distribution cần phù hợp với tax planning.
+
+![Document Review](https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## Quy trình soạn thảo
 
@@ -428,6 +480,8 @@ Các điều khoản về allocation và distribution cần phù hợp với tax
 - Member notifications
 - Record keeping
 
+![Business Success](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Kết luận
 
 Operating Agreement là foundation của LLC success. Đầu tư thời gian và resources để tạo ra một agreement comprehensive và well-drafted sẽ:
@@ -440,7 +494,7 @@ Operating Agreement là foundation của LLC success. Đầu tư thời gian và
 Khuyến nghị strongly là work với experienced business attorney để ensure Operating Agreement meets specific needs và complies với applicable laws.
 
 Remember: Operating Agreement không phải là "set it and forget it" document. Regular review và updates là essential để maintain effectiveness và legal compliance.`,
-    author: 'Nguyễn Minh Anh',
+    author: 'Sail Agency',
     publishDate: '2023-12-28',
     category: 'Kinh nghiệm kinh doanh',
     tags: [
@@ -461,6 +515,8 @@ Remember: Operating Agreement không phải là "set it and forget it" document.
       'EIN (Employer Identification Number) là mã số thuế cần thiết cho LLC. Hướng dẫn chi tiết cách xin EIN miễn phí và nhanh chóng.',
     content: `EIN (Employer Identification Number), còn gọi là Federal Tax ID, là mã số thuế liên bang mà hầu hết các LLC đều cần có. Đây là hướng dẫn chi tiết để xin EIN một cách nhanh chóng và miễn phí.
 
+![EIN Application](https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## EIN là gì?
 
 EIN là mã số 9 chữ số do IRS cấp để identify business entity cho mục đích thuế. Format: XX-XXXXXXX (ví dụ: 12-3456789).
@@ -472,6 +528,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 3. **Kê khai thuế**
 4. **Apply for business licenses**
 5. **Tách biệt tài chính cá nhân và business**
+
+![Business Banking](https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## Khi nào cần EIN?
 
@@ -494,6 +552,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 - **Thời gian**: Ngay lập tức
 - **Chi phí**: Miễn phí
 - **Giờ hoạt động**: 7am-10pm ET, Monday-Friday
+
+![Online Application](https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Phương pháp 2: Fax
 - **Form**: SS-4
@@ -523,6 +583,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 - State of formation
 - Date LLC was formed
 
+![Document Preparation](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Về Responsible Party:
 - Name
 - SSN hoặc ITIN
@@ -544,6 +606,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 
 #### Bước 2: Chọn entity type
 - Select "Limited Liability Company (LLC)"
+
+![IRS Website](https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Bước 3: Điền thông tin LLC
 - Legal name
@@ -573,6 +637,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 - **KHÔNG** trả phí cho EIN
 - **CẢNH GIÁC** với scam websites
 
+![Security Warning](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Một LLC chỉ có một EIN:
 - Không thể xin multiple EINs
 - Nếu làm mất, có thể request duplicate letter
@@ -594,6 +660,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 - Bank accounts
 - Business licenses
 - Insurance policies
+
+![Business Setup](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### 3. Set up business banking:
 - Mang EIN letter đến ngân hàng
@@ -618,6 +686,8 @@ EIN là mã số 9 chữ số do IRS cấp để identify business entity cho m�
 - File Form 8822-B for address changes
 - Letter to IRS for other changes
 - Update may take 6-8 weeks
+
+![Tax Forms](https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## EIN vs SSN cho tax purposes
 
@@ -646,6 +716,8 @@ EIN là essential identifier cho LLC operations. Process xin EIN từ IRS là:
 - **Straightforward**
 - **Fast** (nếu online)
 
+![Business Success](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 Key points:
 - Chỉ xin từ IRS official website
 - Chuẩn bị đầy đủ thông tin trước khi apply
@@ -653,7 +725,7 @@ Key points:
 - Update business records sau khi nhận EIN
 
 Có EIN sẽ giúp LLC operate professionally và comply với tax obligations. Đây là bước quan trọng trong việc establish business identity separate từ personal finances.`,
-    author: 'Trần Văn Hùng',
+    author: 'Sail Agency',
     publishDate: '2023-12-20',
     category: 'Thuế cho LLC',
     tags: ['EIN', 'Tax ID', 'IRS', 'LLC Setup'],
@@ -669,6 +741,8 @@ Có EIN sẽ giúp LLC operate professionally và comply với tax obligations. 
       'Registered Agent là yêu cầu bắt buộc cho mọi LLC. Tìm hiểu vai trò, trách nhiệm và cách chọn dịch vụ Registered Agent phù hợp.',
     content: `Registered Agent là một trong những yêu cầu bắt buộc khi đăng ký LLC tại bất kỳ bang nào ở Mỹ. Hiểu rõ vai trò và cách chọn Registered Agent phù hợp sẽ giúp LLC hoạt động hiệu quả và tuân thủ pháp luật.
 
+![Registered Agent](https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Registered Agent là gì?
 
 Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá nhân hoặc công ty được chỉ định để:
@@ -682,6 +756,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Lawsuit papers và subpoenas
 - Court documents
 - Legal notices từ government agencies
+
+![Legal Documents](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### 2. Nhận thông báo từ nhà nước:
 - Annual report reminders
@@ -706,6 +782,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - **18+ years old** (nếu là cá nhân)
 - **Authorized to do business** (nếu là entity)
 
+![Legal Requirements](https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### Không được phép:
 - PO Box addresses
 - Virtual offices không có physical presence
@@ -724,6 +802,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Must be available during business hours
 - Potential embarrassment nếu bị serve papers
 - Không professional appearance
+
+![Self Service](https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Option 2: Thuê Professional Service
 **Ưu điểm:**
@@ -756,6 +836,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Customer reviews
 - Better Business Bureau rating
 - State compliance record
+
+![Service Selection](https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### 2. Services offered:
 - Document forwarding methods
@@ -793,6 +875,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - **Features**: Comprehensive business services
 - **Best for**: New businesses needing multiple services
 
+![Service Comparison](https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 #### 3. ZenBusiness
 - **Price**: $99/year
 - **Features**: Modern platform, good value
@@ -812,6 +896,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Không responsive support
 - Hidden fees
 - Pressure sales tactics
+
+![Warning Signs](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 ## Thay đổi Registered Agent
 
@@ -835,6 +921,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Vendor contracts
 - Government registrations
 
+![Document Updates](https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 ## Chi phí và considerations
 
 #### Typical costs:
@@ -856,6 +944,8 @@ Registered Agent (còn gọi là Statutory Agent hoặc Resident Agent) là cá 
 - Loss of good standing
 - Inability to defend lawsuits
 - Fines và penalties
+
+![Compliance](https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800)
 
 #### Maintaining compliance:
 - Keep Registered Agent current
@@ -881,10 +971,12 @@ Registered Agent là critical component của LLC compliance. Key takeaways:
 4. **Budget appropriately** - reasonable cost for peace of mind
 5. **Monitor performance** - ensure quality service
 
+![Business Success](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)
+
 Professional Registered Agent service thường là wise investment cho most LLCs, providing privacy, compliance assurance, và professional appearance while allowing owners to focus on growing their business.
 
 Remember: Registered Agent là your LLC's official point of contact với state government và legal system. Choose wisely và maintain this relationship carefully.`,
-    author: 'Lê Thị Mai',
+    author: 'Sail Agency',
     publishDate: '2023-12-15',
     category: 'LLC tại Mỹ',
     tags: [

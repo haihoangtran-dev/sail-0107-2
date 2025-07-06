@@ -96,6 +96,15 @@
     @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-6;
   }
 
+  /* Blog post images */
+  .prose img {
+    @apply rounded-lg shadow-md my-8 w-full;
+  }
+
+  .prose img:hover {
+    @apply shadow-lg;
+  }
+
   /* Temporarily hide the tax consultation button */
   .bg-white.rounded-2xl.shadow-lg.overflow-hidden .mt-8 button:contains("Đặt lịch tư vấn thuế") {
     display: none !important;

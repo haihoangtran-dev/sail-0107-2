@@ -155,6 +155,29 @@ const BlogPost: React.FC = () => {
     return sections.map((section, index) => {
       const trimmed = section.trim();
       
+      // Handle images ![alt](url)
+      if (trimmed.startsWith('![') && trimmed.includes('](')) {
+        const imageMatch = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
+        if (imageMatch) {
+          const [, alt, src] = imageMatch;
+          return (
+            <div key={index} className="my-8">
+              <img
+                src={src}
+                alt={alt}
+                className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                loading="lazy"
+              />
+              {alt && (
+                <p className="text-sm text-gray-500 text-center mt-2 italic">
+                  {alt}
+                </p>
+              )}
+            </div>
+          );
+        }
+      }
+      
       // Handle main headings (##)
       if (trimmed.startsWith('## ')) {
         const headingText = trimmed.replace('## ', '');
