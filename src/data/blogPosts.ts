@@ -10,8 +10,6 @@ export const blogPosts: BlogPost[] = [
       'Delaware là bang được nhiều doanh nghiệp lựa chọn để đăng ký LLC. Tìm hiểu lý do tại sao và quy trình đăng ký chi tiết.',
     content: `Delaware được biết đến là "thiên đường" cho việc đăng ký doanh nghiệp tại Mỹ. Với hệ thống pháp luật doanh nghiệp hoàn thiện và tòa án chuyên biệt, Delaware thu hút hàng nghìn LLC mới mỗi năm.
 
-![Delaware State Capitol](https://images.pexels.com/photos/8112199/pexels-photo-8112199.jpeg?auto=compress&cs=tinysrgb&w=800)
-
 ## Tại sao chọn Delaware?
 
 ##### 1. Hệ thống pháp luật ưu việt
