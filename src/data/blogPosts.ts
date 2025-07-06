@@ -23,22 +23,20 @@ Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho c
 
 ## Quy trình đăng ký LLC tại Delaware
 
-##### Bước 1: Chọn tên LLC
+#### Bước 1: Chọn tên LLC
 - Tên phải kết thúc bằng "LLC" hoặc "Limited Liability Company"
 - Kiểm tra tính khả dụng trên website của Delaware Division of Corporations
 - Tên không được trùng với các LLC đã đăng ký
 
-![Business Name Selection](https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800)
-
-##### Bước 2: Chỉ định Registered Agent
+#### Bước 2: Chỉ định Registered Agent
 Registered Agent phải có địa chỉ tại Delaware và sẵn sàng nhận tài liệu pháp lý trong giờ hành chính.
 
-##### Bước 3: Nộp Certificate of Formation
+#### Bước 3: Nộp Certificate of Formation
 - Phí nộp: $90
 - Có thể nộp online hoặc qua đường bưu điện
 - Thời gian xử lý: 7-10 ngày làm việc
 
-##### Bước 4: Tạo Operating Agreement
+#### Bước 4: Tạo Operating Agreement
 Mặc dù không bắt buộc, Operating Agreement giúp xác định rõ quyền và nghĩa vụ của các thành viên.
 
 ![Legal Documents](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
