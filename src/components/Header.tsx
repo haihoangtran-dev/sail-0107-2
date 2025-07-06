@@ -201,12 +201,6 @@ const Header: React.FC = () => {
               Bảng giá
             </button>
             <button
-              onClick={() => handleNavigation('/blog')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-            >
-              Blog
-            </button>
-            <button
               onClick={() => scrollToSection('faq')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
@@ -278,12 +272,12 @@ const Header: React.FC = () => {
               >
                 Bảng giá
               </button>
-              <button
+              {/* <button
                 onClick={() => handleNavigation('/blog')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
               >
                 Blog
-              </button>
+              </button> */}
               <button
                 onClick={() => scrollToSection('faq')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
