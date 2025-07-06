@@ -12,13 +12,13 @@ export const blogPosts: BlogPost[] = [
 
 ## Tại sao chọn Delaware?
 
-##### 1. Hệ thống pháp luật ưu việt
+#### 1. Hệ thống pháp luật ưu việt
 Delaware có Court of Chancery - tòa án chuyên xử các vụ việc doanh nghiệp, với các thẩm phán có chuyên môn sâu về luật doanh nghiệp.
 
-##### 2. Bảo mật thông tin cao
+#### 2. Bảo mật thông tin cao
 Delaware không yêu cầu công khai tên của các thành viên LLC, giúp bảo vệ quyền riêng tư của chủ sở hữu.
 
-##### 3. Không có thuế bán hàng
+#### 3. Không có thuế bán hàng
 Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho các doanh nghiệp bán lẻ.
 
 ## Quy trình đăng ký LLC tại Delaware
