@@ -155,6 +155,29 @@ const BlogPost: React.FC = () => {
     return sections.map((section, index) => {
       const trimmed = section.trim();
       
+      // Handle images ![alt](url)
+      if (trimmed.startsWith('![') && trimmed.includes('](')) {
+        const imageMatch = trimmed.match(/!\[(.*?)\]\((.*?)\)/);
+        if (imageMatch) {
+          const [, alt, src] = imageMatch;
+          return (
+            <div key={index} className="my-8">
+              <img
+                src={src}
+                alt={alt}
+                className="w-full rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+                loading="lazy"
+              />
+              {alt && (
+                <p className="text-sm text-gray-500 text-center mt-2 italic">
+                  {alt}
+                </p>
+              )}
+            </div>
+          );
+        }
+      }
+      
       // Handle main headings (##)
       if (trimmed.startsWith('## ')) {
         const headingText = trimmed.replace('## ', '');
@@ -175,6 +198,16 @@ const BlogPost: React.FC = () => {
         );
       }
 
+      // Handle 5-level headings (#####)
+      if (trimmed.startsWith('##### ')) {
+        const headingText = trimmed.replace('##### ', '');
+        return (
+          <h5 key={index} className="text-base font-semibold text-blue-900 mt-4 mb-2">
+            {headingText}
+          </h5>
+        );
+      }
+      
       // Handle sub-sub headings (####)
       if (trimmed.startsWith('#### ')) {
         const headingText = trimmed.replace('#### ', '');
@@ -224,10 +257,26 @@ const BlogPost: React.FC = () => {
       // Regular paragraphs
       if (trimmed && !trimmed.startsWith('#')) {
         // Process inline formatting
-        let formattedText = trimmed
-          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>')
-          .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
-          .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
+        let formattedText = trimmed;
+        
+        // Handle inline code first to avoid conflicts
+        formattedText = formattedText.replace(/`([^`]+)`/g, '___CODE___$1___/CODE___');
+        
+        // Handle bold text **text** - use non-greedy matching
+        formattedText = formattedText.replace(/\*\*([^*]+?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>');
+        
+        // Handle italic text *text* - only single asterisks not part of double
+        // Handle italic text - simple approach to avoid lookbehind issues
+        formattedText = formattedText.replace(/\*([^*]+?)\*/g, (match, content) => {
+          // Skip if this is part of bold formatting
+          if (match.includes('**') || formattedText.includes('**' + content + '**')) {
+            return match;
+          }
+          return `<em class="italic">${content}</em>`;
+        });
+        
+        // Restore code formatting
+        formattedText = formattedText.replace(/___CODE___([^_]+?)___\/CODE___/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
         
         return (
           <p 
