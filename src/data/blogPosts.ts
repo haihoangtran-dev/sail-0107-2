@@ -18,8 +18,6 @@ Delaware có Court of Chancery - tòa án chuyên xử các vụ việc doanh ng
 ##### 2. Bảo mật thông tin cao
 Delaware không yêu cầu công khai tên của các thành viên LLC, giúp bảo vệ quyền riêng tư của chủ sở hữu.
 
-![Business Privacy](https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800)
-
 ##### 3. Không có thuế bán hàng
 Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho các doanh nghiệp bán lẻ.
 
