@@ -257,10 +257,16 @@ const BlogPost: React.FC = () => {
       // Regular paragraphs
       if (trimmed && !trimmed.startsWith('#')) {
         // Process inline formatting
-        let formattedText = trimmed
-          .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>')
-          .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
-          .replace(/`(.*?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
+        let formattedText = trimmed;
+        
+        // Handle bold text **text** - improved regex
+        formattedText = formattedText.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>');
+        
+        // Handle italic text *text* - avoid conflict with bold
+        formattedText = formattedText.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
+        
+        // Handle inline code `text`
+        formattedText = formattedText.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
         
         return (
           <p 
