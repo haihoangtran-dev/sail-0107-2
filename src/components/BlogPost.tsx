@@ -259,14 +259,24 @@ const BlogPost: React.FC = () => {
         // Process inline formatting
         let formattedText = trimmed;
         
-        // Handle bold text **text** - improved regex
-        formattedText = formattedText.replace(/\*\*([^*]+)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>');
+        // Handle inline code first to avoid conflicts
+        formattedText = formattedText.replace(/`([^`]+)`/g, '___CODE___$1___/CODE___');
         
-        // Handle italic text *text* - avoid conflict with bold
-        formattedText = formattedText.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em class="italic">$1</em>');
+        // Handle bold text **text** - use non-greedy matching
+        formattedText = formattedText.replace(/\*\*([^*]+?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>');
         
-        // Handle inline code `text`
-        formattedText = formattedText.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
+        // Handle italic text *text* - only single asterisks not part of double
+        // Handle italic text - simple approach to avoid lookbehind issues
+        formattedText = formattedText.replace(/\*([^*]+?)\*/g, (match, content) => {
+          // Skip if this is part of bold formatting
+          if (match.includes('**') || formattedText.includes('**' + content + '**')) {
+            return match;
+          }
+          return `<em class="italic">${content}</em>`;
+        });
+        
+        // Restore code formatting
+        formattedText = formattedText.replace(/___CODE___([^_]+?)___\/CODE___/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
         
         return (
           <p 
