@@ -198,6 +198,16 @@ const BlogPost: React.FC = () => {
         );
       }
 
+      // Handle 5-level headings (#####)
+      if (trimmed.startsWith('##### ')) {
+        const headingText = trimmed.replace('##### ', '');
+        return (
+          <h5 key={index} className="text-base font-semibold text-blue-900 mt-4 mb-2">
+            {headingText}
+          </h5>
+        );
+      }
+      
       // Handle sub-sub headings (####)
       if (trimmed.startsWith('#### ')) {
         const headingText = trimmed.replace('#### ', '');
