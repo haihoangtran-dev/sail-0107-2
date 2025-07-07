@@ -349,15 +349,6 @@ const BlogPost: React.FC = () => {
 
       <div className="container-custom py-12">
         <div className="max-w-4xl mx-auto">
-          {/* Featured Image */}
-          <div className="aspect-video rounded-lg overflow-hidden mb-12">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
           {/* Content */}
           <article className="prose max-w-none">
             {renderContent(post.content)}
