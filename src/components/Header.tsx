@@ -200,12 +200,12 @@ const Header: React.FC = () => {
             >
               Bảng giá
             </button>
-                        {/* <button
+             <button
               onClick={() => handleNavigation('/blog')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
             >
               Blog
-            </button> */}
+            </button>
             <button
               onClick={() => scrollToSection('faq')}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
