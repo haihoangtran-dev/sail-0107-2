@@ -257,7 +257,6 @@ Tuân thủ nghĩa vụ thuế và báo cáo cho LLC đòi hỏi:
     readTime: '20 phút đọc',
     image:
       'https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800',
-  }
   },
   {
     id: 2,
