@@ -294,7 +294,7 @@ const BlogPost: React.FC = () => {
             Quay lại Blog
           </button>
 
-          <div className="max-w-4xl">
+          <div className="">
             {/* Category */}
             <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full mb-4">
               {post.category}
