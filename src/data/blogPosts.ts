@@ -2,7 +2,7 @@ import { BlogPost } from '../types';
 
 export const blogPosts: BlogPost[] = [
   {
-    id: 1,
+    id: 2,
     title: 'Hướng dẫn đăng ký LLC tại Delaware: Lợi ích và quy trình chi tiết',
     slug: 'huong-dan-dang-ky-llc-tai-delaware',
     excerpt:
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
       'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
     {
-    id: 2,
+    id: 1,
     title: 'Quy trình thành lập LLC tại Hoa Kỳ: Hướng dẫn chi tiết cho doanh nghiệp quốc tế',
     slug: 'huong-dan-dang-ky-llc-tai-hoa-ky',
     excerpt:
@@ -607,7 +607,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['Delaware', 'LLC', 'Đăng ký doanh nghiệp'],
     readTime: '8 phút đọc',
     image:
-      'https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
   }
 ];
 
