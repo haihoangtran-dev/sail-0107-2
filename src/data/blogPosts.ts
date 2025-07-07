@@ -59,7 +59,7 @@ export const blogPosts: BlogPost[] = [
 
 <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Success in Business" />`,
     author: 'Sail Agency',
-    publishDate: '2024-01-15',
+    publishDate: '2024-10-15',
     category: 'LLC tại Mỹ',
     tags: ['Delaware', 'LLC', 'Đăng ký doanh nghiệp'],
     readTime: '8 phút đọc',
