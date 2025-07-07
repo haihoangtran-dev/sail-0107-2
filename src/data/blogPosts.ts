@@ -8,50 +8,56 @@ export const blogPosts: BlogPost[] = [
     slug: 'huong-dan-dang-ky-llc-tai-delaware',
     excerpt:
       'Delaware là bang được nhiều doanh nghiệp lựa chọn để đăng ký LLC. Tìm hiểu lý do tại sao và quy trình đăng ký chi tiết.',
-    content: `Delaware được biết đến là "thiên đường" cho việc đăng ký doanh nghiệp tại Mỹ. Với hệ thống pháp luật doanh nghiệp hoàn thiện và tòa án chuyên biệt, Delaware thu hút hàng nghìn LLC mới mỗi năm.
+    content: `<p>Delaware được biết đến là "thiên đường" cho việc đăng ký doanh nghiệp tại Mỹ. Với hệ thống pháp luật doanh nghiệp hoàn thiện và tòa án chuyên biệt, Delaware thu hút hàng nghìn LLC mới mỗi năm.</p>
 
-## Tại sao chọn Delaware?
+<h2>Tại sao chọn Delaware?</h2>
 
-#### 1. Hệ thống pháp luật ưu việt
-Delaware có Court of Chancery - tòa án chuyên xử các vụ việc doanh nghiệp, với các thẩm phán có chuyên môn sâu về luật doanh nghiệp.
+<h4>1. Hệ thống pháp luật ưu việt</h4>
+<p>Delaware có Court of Chancery - tòa án chuyên xử các vụ việc doanh nghiệp, với các thẩm phán có chuyên môn sâu về luật doanh nghiệp.</p>
 
-#### 2. Bảo mật thông tin cao
-Delaware không yêu cầu công khai tên của các thành viên LLC, giúp bảo vệ quyền riêng tư của chủ sở hữu.
+<h4>2. Bảo mật thông tin cao</h4>
+<p>Delaware không yêu cầu công khai tên của các thành viên LLC, giúp bảo vệ quyền riêng tư của chủ sở hữu.</p>
 
-#### 3. Không có thuế bán hàng
-Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho các doanh nghiệp bán lẻ.
+<h4>3. Không có thuế bán hàng</h4>
+<p>Delaware không áp dụng thuế bán hàng, giúp tiết kiệm chi phí cho các doanh nghiệp bán lẻ.</p>
 
-## Quy trình đăng ký LLC tại Delaware
+<h2>Quy trình đăng ký LLC tại Delaware</h2>
 
-#### Bước 1: Chọn tên LLC
-- Tên phải kết thúc bằng "LLC" hoặc "Limited Liability Company"
-- Kiểm tra tính khả dụng trên website của Delaware Division of Corporations
-- Tên không được trùng với các LLC đã đăng ký
+<h4>Bước 1: Chọn tên LLC</h4>
+<ul>
+  <li>Tên phải kết thúc bằng "LLC" hoặc "Limited Liability Company"</li>
+  <li>Kiểm tra tính khả dụng trên website của Delaware Division of Corporations</li>
+  <li>Tên không được trùng với các LLC đã đăng ký</li>
+</ul>
 
-#### Bước 2: Chỉ định Registered Agent
-Registered Agent phải có địa chỉ tại Delaware và sẵn sàng nhận tài liệu pháp lý trong giờ hành chính.
+<h4>Bước 2: Chỉ định Registered Agent</h4>
+<p>Registered Agent phải có địa chỉ tại Delaware và sẵn sàng nhận tài liệu pháp lý trong giờ hành chính.</p>
 
-#### Bước 3: Nộp Certificate of Formation
-- Phí nộp: $90
-- Có thể nộp online hoặc qua đường bưu điện
-- Thời gian xử lý: 7-10 ngày làm việc
+<h4>Bước 3: Nộp Certificate of Formation</h4>
+<ul>
+  <li>Phí nộp: $90</li>
+  <li>Có thể nộp online hoặc qua đường bưu điện</li>
+  <li>Thời gian xử lý: 7-10 ngày làm việc</li>
+</ul>
 
-#### Bước 4: Tạo Operating Agreement
-Mặc dù không bắt buộc, Operating Agreement giúp xác định rõ quyền và nghĩa vụ của các thành viên.
+<h4>Bước 4: Tạo Operating Agreement</h4>
+<p>Mặc dù không bắt buộc, Operating Agreement giúp xác định rõ quyền và nghĩa vụ của các thành viên.</p>
 
-![Legal Documents](https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800)
+<img src="https://images.pexels.com/photos/5668772/pexels-photo-5668772.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Legal Documents" />
 
-## Chi phí duy trì hàng năm
+<h2>Chi phí duy trì hàng năm</h2>
 
-- Annual Report: $300/năm
-- Registered Agent: $100-200/năm
-- Franchise Tax: $300/năm (tối thiểu)
+<ul>
+  <li>Annual Report: $300/năm</li>
+  <li>Registered Agent: $100-200/năm</li>
+  <li>Franchise Tax: $300/năm (tối thiểu)</li>
+</ul>
 
-## Kết luận
+<h2>Kết luận</h2>
 
-Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.
+<p>Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.</p>
 
-![Success in Business](https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800)`,
+<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Success in Business" />`,
     author: 'Sail Agency',
     publishDate: '2024-01-15',
     category: 'LLC tại Mỹ',
@@ -249,6 +255,135 @@ Tuân thủ nghĩa vụ thuế và báo cáo cho LLC đòi hỏi:
     category: 'Thuế cho LLC',
     tags: ['Thuế', 'LLC', 'Annual Report', 'Compliance', 'IRS', 'State Tax'],
     readTime: '20 phút đọc',
+    image:
+      'https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800',
+  }
+  },
+  {
+    id: 2,
+    title: 'Thuế LLC: Những điều cần biết về Single-Member và Multi-Member LLC',
+    slug: 'thue-llc-single-member-multi-member',
+    excerpt:
+      'Tìm hiểu cách LLC được đánh thuế tại Mỹ, sự khác biệt giữa Single-Member và Multi-Member LLC, và các lựa chọn thuế khác nhau.',
+    content: `<p>Một trong những lợi ích lớn nhất của LLC là tính linh hoạt trong việc lựa chọn cách thức đánh thuế. Hiểu rõ các tùy chọn này sẽ giúp bạn tối ưu hóa nghĩa vụ thuế của mình.</p>
+
+<h2>LLC và Pass-Through Taxation</h2>
+
+<p>Theo mặc định, LLC sử dụng "pass-through taxation", có nghĩa là:</p>
+<ul>
+  <li>LLC không nộp thuế ở cấp độ doanh nghiệp</li>
+  <li>Lợi nhuận và lỗ "chuyển qua" cho các thành viên</li>
+  <li>Thành viên nộp thuế trên tờ khai thuế cá nhân</li>
+</ul>
+
+<h2>Single-Member LLC (SMLLC)</h2>
+
+<h4>Đặc điểm:</h4>
+<ul>
+  <li>Được IRS coi như "disregarded entity"</li>
+  <li>Báo cáo thu nhập trên Schedule C của Form 1040</li>
+  <li>Phải nộp Self-Employment Tax (15.3%)</li>
+</ul>
+
+<img src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Single Member LLC" />
+
+<h4>Ví dụ:</h4>
+<p>Nếu SMLLC có lợi nhuận $50,000:</p>
+<ul>
+  <li>Income Tax: theo tax bracket cá nhân</li>
+  <li>Self-Employment Tax: $50,000 × 15.3% = $7,650</li>
+</ul>
+
+<h2>Multi-Member LLC</h2>
+
+<h4>Đặc điểm:</h4>
+<ul>
+  <li>Được đánh thuế như Partnership</li>
+  <li>Nộp Form 1065 (thông tin)</li>
+  <li>Mỗi thành viên nhận Schedule K-1</li>
+  <li>Thành viên báo cáo trên tờ khai cá nhân</li>
+</ul>
+
+<h4>Phân bổ lợi nhuận:</h4>
+<ul>
+  <li>Theo tỷ lệ sở hữu (mặc định)</li>
+  <li>Theo thỏa thuận trong Operating Agreement</li>
+</ul>
+
+<h2>Lựa chọn đánh thuế khác</h2>
+
+<h4>S-Corp Election</h4>
+<ul>
+  <li>Nộp Form 2553</li>
+  <li>Tiết kiệm Self-Employment Tax</li>
+  <li>Yêu cầu trả lương hợp lý cho owner-employee</li>
+</ul>
+
+<h4>C-Corp Election</h4>
+<ul>
+  <li>Nộp Form 8832</li>
+  <li>Double taxation</li>
+  <li>Phù hợp khi muốn giữ lại lợi nhuận trong công ty</li>
+</ul>
+
+<img src="https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tax Elections" />
+
+<h2>Chiến lược tối ưu thuế</h2>
+
+<h4>1. Theo dõi chi phí kinh doanh</h4>
+<ul>
+  <li>Văn phòng tại nhà</li>
+  <li>Thiết bị và phần mềm</li>
+  <li>Chi phí đi lại</li>
+  <li>Bữa ăn kinh doanh (50%)</li>
+</ul>
+
+<h4>2. Retirement Plans</h4>
+<ul>
+  <li>SEP-IRA: đóng góp lên đến 25% thu nhập</li>
+  <li>Solo 401(k): đóng góp cao hơn cho owner-only business</li>
+</ul>
+
+<h4>3. Health Savings Account (HSA)</h4>
+<ul>
+  <li>Deduction cho self-employed</li>
+  <li>Triple tax advantage</li>
+</ul>
+
+<h2>Lưu ý quan trọng</h2>
+
+<h4>State Taxes</h4>
+<ul>
+  <li>Mỗi bang có quy định khác nhau</li>
+  <li>Một số bang không có income tax</li>
+  <li>Cần hiểu rõ quy định tại bang đăng ký và bang hoạt động</li>
+</ul>
+
+<h4>Quarterly Estimated Taxes</h4>
+<ul>
+  <li>Nộp thuế ước tính hàng quý</li>
+  <li>Tránh penalty cho underpayment</li>
+  <li>Sử dụng Form 1040ES</li>
+</ul>
+
+<h2>Kết luận</h2>
+
+<p>Việc lựa chọn cách thức đánh thuế cho LLC cần được cân nhắc kỹ lưỡng dựa trên:</p>
+<ul>
+  <li>Số lượng thành viên</li>
+  <li>Mức thu nhập dự kiến</li>
+  <li>Kế hoạch phân phối lợi nhuận</li>
+  <li>Chiến lược phát triển dài hạn</li>
+</ul>
+
+<img src="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tax Consultation" />
+
+<p><strong>Khuyến nghị nên tham khảo ý kiến của chuyên gia thuế để đưa ra quyết định phù hợp nhất.</strong></p>`,
+    author: 'Sail Agency',
+    publishDate: '2024-01-10',
+    category: 'Thuế cho LLC',
+    tags: ['Thuế', 'LLC', 'IRS', 'Tax Planning'],
+    readTime: '12 phút đọc',
     image:
       'https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800',
   }
