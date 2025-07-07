@@ -10,6 +10,7 @@ export const blogPosts: BlogPost[] = [
       'Delaware là bang được nhiều doanh nghiệp lựa chọn để đăng ký LLC. Tìm hiểu lý do tại sao và quy trình đăng ký chi tiết.',
     content: `<p>Delaware được biết đến là "thiên đường" cho việc đăng ký doanh nghiệp tại Mỹ. Với hệ thống pháp luật doanh nghiệp hoàn thiện và tòa án chuyên biệt, Delaware thu hút hàng nghìn LLC mới mỗi năm.</p>
 
+<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Success in Business" />
 <h2>Tại sao chọn Delaware?</h2>
 
 <h4>1. Hệ thống pháp luật ưu việt</h4>
@@ -55,9 +56,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>Kết luận</h2>
 
-<p>Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.</p>
-
-<img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Success in Business" />`,
+<p>Delaware là lựa chọn tuyệt vời cho các LLC muốn có sự linh hoạt trong quản trị và bảo vệ pháp lý tốt nhất. Tuy chi phí cao hơn một số bang khác, nhưng lợi ích lâu dài rất đáng giá.</p>`,
     author: 'Sail Agency',
     publishDate: '2024-10-15',
     category: 'LLC tại Mỹ',
