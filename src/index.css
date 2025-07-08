@@ -192,12 +192,16 @@ select:focus {
 }
 
 /* Header navigation focus styles */
-header button:focus,
-header a:focus {
+header nav button:focus,
+header nav a:focus,
+header nav button:hover,
+header nav a:hover {
   color: #2563eb !important;
   text-decoration: underline !important;
-  text-underline-offset: 2px !important;
+  text-underline-offset: 4px !important;
+  text-decoration-thickness: 2px !important;
   outline: none !important;
+  transition: all 0.2s ease !important;
 }
 
 /* Maintain accessibility for form elements */
