@@ -187,19 +187,22 @@ a:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none;
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
 /* Header navigation focus styles */
 header button:focus,
 header a:focus {
   color: #2563eb !important;
-  text-decoration: underline;
-  outline: none;
+  text-decoration: underline !important;
+  outline: none !important;
 }
-}
-/* Maintain accessibility for other elements */
+
+/* Maintain accessibility for form elements */
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #3b82f6 !important;
   outline-offset: 2px;
 }
