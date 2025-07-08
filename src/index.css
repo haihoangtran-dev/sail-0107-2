@@ -196,6 +196,7 @@ header button:focus,
 header a:focus {
   color: #2563eb !important;
   text-decoration: underline !important;
+  text-underline-offset: 2px !important;
   outline: none !important;
 }
 
