@@ -400,16 +400,7 @@ export const quyTrinhThanhLapLLCTaiHoaKy = `<div>
           <span class="">Thành lập một LLC tại Mỹ có thể là một quá trình phức tạp, đặc biệt đối với doanh nghiệp nước ngoài. </span><span class="">Sail Agency</span><span class=""> cung cấp </span><span class="font-[700]">giải pháp toàn diện</span><span class=""> giúp bạn hoàn tất mọi thủ tục nhanh chóng, hợp pháp và tối ưu chi phí.</span>
         </p>
     </div>
-          
-      <div class="flex flex-col mt-2" data-test-id="publishing-image-block" rel="ugc">
-        
-      <figure>
-        <img alt="Article content" class="lazy-load block w-full" data-delayed-url="https://media.licdn.com/dms/image/v2/D5612AQGtzd9N_cQ05g/article-inline_image-shrink_1000_1488/B56ZUhxknmHEAQ-/0/1740028408075?e=2147483647&v=beta&t=j0AQ-zo6PzuSJIAsGa_yg6dgp70W7qC_srouQ-HqNr8">
-      </figure>
-    
-      </div>
-  
-  
+ 
     <div class="article-main__content" data-test-id="publishing-text-block">
         <h3><span class="">Lợi ích khi sử dụng dịch vụ của Sail Agency</span></h3>
     </div>
