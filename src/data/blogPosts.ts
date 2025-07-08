@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     tags: ['LLC', 'Đăng ký doanh nghiệp'],
     readTime: '15 phút đọc',
     image:
-      'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/1550342/pexels-photo-1550342.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
       {
     id: 1,
