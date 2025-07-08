@@ -15,7 +15,7 @@ export const blogPosts: BlogPost[] = [
     author: 'Sail Agency',
     publishDate: '2025-02-10',
     category: 'LLC tại Mỹ',
-    tags: [, 'LLC', 'Đăng ký doanh nghiệp'],
+    tags: ['LLC', 'Đăng ký doanh nghiệp'],
     readTime: '15 phút đọc',
     image:
       'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -25,6 +25,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Hướng dẫn đăng ký LLC tại Delaware: Lợi ích và quy trình chi tiết',
     slug: 'huong-dan-dang-ky-llc-tai-delaware',
     excerpt:
+      'Delaware là một trong những bang được ưa chuộng nhất để thành lập LLC tại Hoa Kỳ nhờ vào hệ thống pháp luật doanh nghiệp thuận lợi.',
     content: huongDanDangKyLLCTaiDelaware,
     author: 'Sail Agency',
     publishDate: '2024-10-15',
