@@ -421,7 +421,6 @@ export const quyTrinhThanhLapLLCTaiHoaKy = `<div>
     <li><span class="font-[700]">Cung cấp </span><span class="font-[700]">Registered Agent</span><span class="">: Giúp doanh nghiệp đáp ứng yêu cầu pháp lý tại Mỹ. </span></li>
     <li><span class="font-[700]">Đăng ký mã số thuế EIN</span><span class="">: Hỗ trợ xin EIN từ IRS để mở tài khoản ngân hàng và vận hành kinh doanh. </span></li>
     <li><span class="font-[700]">Dịch vụ địa chỉ văn phòng ảo</span><span class="">: Cung cấp địa chỉ doanh nghiệp tại Mỹ để nhận thư từ và tài liệu pháp lý. </span></li>
-    <li><span class="font-[700]">Hỗ trợ mở tài khoản ngân hàng</span><span class="">: Kết nối với các ngân hàng hỗ trợ doanh nghiệp nước ngoài như </span><span class="font-[700]">Mercury, Relay, Wise</span><span class="">. </span></li>
     <li><span class="font-[700]">Hướng dẫn kê khai thuế và duy trì LLC</span><span class="">: Cung cấp thông tin về nghĩa vụ thuế và báo cáo thường niên theo quy định từng bang.</span></li>      </ul>
   
         <p></p>
