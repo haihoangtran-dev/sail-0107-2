@@ -149,7 +149,18 @@ const BlogPost: React.FC = () => {
 
   // Simple content rendering function
   const renderContent = (content: string) => {
-    // Split content by double line breaks to get paragraphs
+    // First, handle HTML content if it exists
+    if (content.includes('<h1>') || content.includes('<h2>') || content.includes('<p>') || content.includes('<strong>')) {
+      // Content already contains HTML tags, render directly
+      return (
+        <div 
+          className="prose max-w-none"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      );
+    }
+    
+    // Otherwise, process markdown-style content
     const sections = content.split('\n\n').filter(section => section.trim());
     
     return sections.map((section, index) => {
@@ -257,32 +268,11 @@ const BlogPost: React.FC = () => {
       // Regular paragraphs
       if (trimmed && !trimmed.startsWith('#')) {
         // Process inline formatting
-        let formattedText = trimmed;
-        
-        // Handle inline code first to avoid conflicts
-        formattedText = formattedText.replace(/`([^`]+)`/g, '___CODE___$1___/CODE___');
-        
-        // Handle bold text **text** - use non-greedy matching
-        formattedText = formattedText.replace(/\*\*([^*]+?)\*\*/g, '<strong class="font-semibold text-blue-900">$1</strong>');
-        
-        // Handle italic text *text* - only single asterisks not part of double
-        // Handle italic text - simple approach to avoid lookbehind issues
-        formattedText = formattedText.replace(/\*([^*]+?)\*/g, (match, content) => {
-          // Skip if this is part of bold formatting
-          if (match.includes('**') || formattedText.includes('**' + content + '**')) {
-            return match;
-          }
-          return `<em class="italic">${content}</em>`;
-        });
-        
-        // Restore code formatting
-        formattedText = formattedText.replace(/___CODE___([^_]+?)___\/CODE___/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-blue-700">$1</code>');
-        
         return (
           <p 
             key={index} 
             className="text-gray-600 leading-relaxed mb-6"
-            dangerouslySetInnerHTML={{ __html: formattedText }}
+            dangerouslySetInnerHTML={{ __html: trimmed }}
           />
         );
       }
@@ -304,7 +294,7 @@ const BlogPost: React.FC = () => {
             Quay lại Blog
           </button>
 
-          <div className="max-w-4xl">
+          <div>
             {/* Category */}
             <span className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full mb-4">
               {post.category}
@@ -359,15 +349,6 @@ const BlogPost: React.FC = () => {
 
       <div className="container-custom py-12">
         <div className="max-w-4xl mx-auto">
-          {/* Featured Image */}
-          <div className="aspect-video rounded-lg overflow-hidden mb-12">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
           {/* Content */}
           <article className="prose max-w-none">
             {renderContent(post.content)}
