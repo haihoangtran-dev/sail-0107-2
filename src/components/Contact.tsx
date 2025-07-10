@@ -1,9 +1,11 @@
 import React from 'react'
 import { Mail, Send, Facebook, MessageCircle, MapPin } from 'lucide-react'
 import { useForm, ValidationError } from '@formspree/react'
+import StateDropdown from './StateDropdown'
 
 const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm("mvgrlynw")
+  const [selectedState, setSelectedState] = React.useState('')
 
   if (state.succeeded) {
     return (
@@ -196,12 +198,15 @@ const Contact: React.FC = () => {
                   <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
                     Tên tiểu bang
                   </label>
-                  <input
-                    type="text"
-                    id="state"
-                    name="state"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                  <StateDropdown
+                    value={selectedState}
+                    onChange={setSelectedState}
                     placeholder="Tiểu bang dự kiến"
+                  />
+                  <input
+                    type="hidden"
+                    name="state"
+                    value={selectedState}
                   />
                   <ValidationError 
                     prefix="State" 
