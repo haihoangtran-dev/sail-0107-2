@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
                   <StateDropdown
                     value={selectedState}
                     onChange={setSelectedState}
-                    placeholder="Chọn hoặc nhập tên tiểu bang..."
+                    placeholder="Tiểu bang dự kiến"
                   />
                   <input
                     type="hidden"
