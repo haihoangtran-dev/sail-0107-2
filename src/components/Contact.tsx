@@ -193,19 +193,19 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="state" className="block text-sm font-medium text-gray-700 mb-2">
                     Tên tiểu bang
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    name="company"
+                    id="state"
+                    name="state"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                     placeholder="Tiểu bang dự kiến"
                   />
                   <ValidationError 
-                    prefix="Company" 
-                    field="company"
+                    prefix="State" 
+                    field="state"
                     errors={state.errors}
                     className="text-red-500 text-sm mt-1"
                   />
