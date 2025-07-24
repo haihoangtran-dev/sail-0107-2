@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     createServiceNavigators(navigate, location.pathname)
 
   return (
-    <footer className="bg-blue-900 text-white relative overflow-hidden">
+    <footer className="bg-blue-600 text-white relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-10">
         <img 
