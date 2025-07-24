@@ -77,7 +77,7 @@ const Benefits: React.FC = () => {
   return (
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Tại sao chọn Sail Agency?
           </h2>
@@ -88,7 +88,7 @@ const Benefits: React.FC = () => {
         </div>
 
         {/* Mobile: Single column, Desktop: 2x2 grid */}
-        <div ref={benefitsGridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div ref={benefitsGridRef as React.RefObject<HTMLDivElement>} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => {
             const colors = colorSchemes[index];
             const animationType = index % 2 === 0 ? 'fade-left' : 'fade-right';
@@ -96,7 +96,7 @@ const Benefits: React.FC = () => {
             
             return (
               <div
-                ref={benefitRef}
+                ref={benefitRef as React.RefObject<HTMLDivElement>}
                 key={index}
                 className={`group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300`}
               >

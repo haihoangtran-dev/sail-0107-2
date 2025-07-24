@@ -75,7 +75,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="section-padding bg-white">
       <div className="container-custom">
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Bảng giá dịch vụ
           </h2>
@@ -84,7 +84,7 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        <div ref={servicesGridRef} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={servicesGridRef as React.RefObject<HTMLDivElement>} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = getServiceIcon(index)
             const animationType = index === 0 ? 'fade-left' : 
@@ -93,7 +93,7 @@ const Pricing: React.FC = () => {
             
             return (
               <div 
-                ref={serviceRef}
+                ref={serviceRef as React.RefObject<HTMLDivElement>}
                 key={index}
                 className={`relative rounded-2xl border-2 overflow-hidden ${
                   service.popular 
@@ -103,7 +103,7 @@ const Pricing: React.FC = () => {
               >
                 {/* Icon Header */}
                 <div 
-                  ref={useScrollAnimation('scale-up', 200 * (index + 1))}
+                  ref={useScrollAnimation('scale-up', 200 * (index + 1)) as React.RefObject<HTMLDivElement>}
                   className="flex justify-center pt-12 pb-6"
                 >
                   <div className={`w-24 h-24 rounded-full flex items-center justify-center ${
@@ -121,7 +121,7 @@ const Pricing: React.FC = () => {
 
                 <div className="px-8 pb-8">
                   <div 
-                    ref={useScrollAnimation('fade-in', 250 * (index + 1))}
+                    ref={useScrollAnimation('fade-in', 250 * (index + 1)) as React.RefObject<HTMLDivElement>}
                     className="text-center mb-8"
                   >
                     <h3 className="text-2xl font-bold text-blue-600 mb-2">
@@ -169,7 +169,7 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Additional info */}
-        <div ref={infoRef} className="text-center mt-12 bg-blue-50 rounded-xl p-6">
+        <div ref={infoRef as React.RefObject<HTMLDivElement>} className="text-center mt-12 bg-blue-50 rounded-xl p-6">
           <p className="mb-2 text-blue-900 font-semibold">
             <strong>Cam kết:</strong> Tất cả dịch vụ đều bao gồm phí chính thức và không có phí ẩn
           </p>

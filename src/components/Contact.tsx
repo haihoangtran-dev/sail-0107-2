@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom" id="contact" >
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Bắt đầu đăng ký LLC ngay hôm nay
           </h2>
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
           <div>
             {/* Professional Image */}
             <div 
-              ref={imageRef}
+              ref={imageRef as React.RefObject<HTMLDivElement>}
               className="relative rounded-xl overflow-hidden pb-16"
             >
               <img 
@@ -78,13 +78,13 @@ const Contact: React.FC = () => {
               />
             </div>
 
-            <div ref={contactInfoRef}>
+            <div ref={contactInfoRef as React.RefObject<HTMLDivElement>}>
               <h3 className="text-2xl text-blue-600 mb-6" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                 Thông tin liên hệ
               </h3>
               <div className="space-y-6">
                 <div 
-                  ref={useScrollAnimation('fade-right', 100)}
+                  ref={useScrollAnimation('fade-right', 100) as React.RefObject<HTMLDivElement>}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div 
-                  ref={useScrollAnimation('fade-right', 200)}
+                  ref={useScrollAnimation('fade-right', 200) as React.RefObject<HTMLDivElement>}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -110,7 +110,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div 
-                  ref={useScrollAnimation('fade-right', 300)}
+                  ref={useScrollAnimation('fade-right', 300) as React.RefObject<HTMLDivElement>}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -130,7 +130,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div 
-                  ref={useScrollAnimation('fade-right', 400)}
+                  ref={useScrollAnimation('fade-right', 400) as React.RefObject<HTMLDivElement>}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -153,10 +153,10 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div ref={formRef} className="bg-white rounded-xl p-8 shadow-lg">
+          <div ref={formRef as React.RefObject<HTMLDivElement>} className="bg-white rounded-xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div 
-                ref={useScrollAnimation('fade-left', 100)}
+                ref={useScrollAnimation('fade-left', 100) as React.RefObject<HTMLDivElement>}
                 className="grid md:grid-cols-2 gap-4"
               >
                 <div>
@@ -200,7 +200,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div 
-                ref={useScrollAnimation('fade-left', 200)}
+                ref={useScrollAnimation('fade-left', 200) as React.RefObject<HTMLDivElement>}
                 className="grid md:grid-cols-2 gap-4"
               >
                 <div>
@@ -244,7 +244,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div ref={useScrollAnimation('fade-left', 300)}>
+              <div ref={useScrollAnimation('fade-left', 300) as React.RefObject<HTMLDivElement>}>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Dịch vụ quan tâm
                 </label>
@@ -266,7 +266,7 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <div ref={useScrollAnimation('fade-left', 400)}>
+              <div ref={useScrollAnimation('fade-left', 400) as React.RefObject<HTMLDivElement>}>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Tin nhắn
                 </label>
@@ -286,7 +286,7 @@ const Contact: React.FC = () => {
               </div>
 
               <button
-                ref={useScrollAnimation('scale-up', 500)}
+                ref={useScrollAnimation('scale-up', 500) as React.RefObject<HTMLDivElement>}
                 type="submit"
                 disabled={state.submitting}
                 className="w-full btn-primary flex items-center justify-center space-x-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
