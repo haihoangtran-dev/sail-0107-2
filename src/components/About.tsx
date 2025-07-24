@@ -534,25 +534,25 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-900 text-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-blue-600">
             Sẵn sàng bắt đầu hành trình kinh doanh?
           </h2>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Hãy để Sail Agency đồng hành cùng bạn trong việc thành lập LLC và
             chinh phục thị trường Mỹ
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleContactClick}
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Liên hệ tư vấn miễn phí
             </button>
             <button
               onClick={() => (window.location.href = '/blog')}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Tìm hiểu thêm
             </button>
