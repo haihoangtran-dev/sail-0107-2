@@ -35,7 +35,7 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Mulish', 'system-ui', 'sans-serif'],
       },
     },
   },
