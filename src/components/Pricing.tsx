@@ -76,7 +76,7 @@ const Pricing: React.FC = () => {
     <section id="pricing" className="section-padding bg-white">
       <div className="container-custom">
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-4 uppercase">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Bảng giá dịch vụ
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -180,7 +180,7 @@ const Pricing: React.FC = () => {
 
         {/* Service Comparison */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8 hidden">
-          <h3 className="text-2xl font-bold text-blue-900 text-center mb-8">
+          <h3 className="text-2xl text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             So sánh dịch vụ
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">

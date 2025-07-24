@@ -49,27 +49,39 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-bold text-blue-600 mt-16 mb-8 first:mt-0 uppercase;
+    @apply text-3xl text-blue-600 mt-16 mb-8 first:mt-0 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose h2 {
-    @apply text-2xl font-bold text-blue-600 mt-12 mb-6 first:mt-0 uppercase;
+    @apply text-2xl text-blue-600 mt-12 mb-6 first:mt-0 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose h3 {
-    @apply text-xl font-bold text-blue-600 mt-8 mb-4 uppercase;
+    @apply text-xl text-blue-600 mt-8 mb-4 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose h4 {
-    @apply text-lg font-bold text-blue-600 mt-6 mb-3 uppercase;
+    @apply text-lg text-blue-600 mt-6 mb-3 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose h5 {
-    @apply text-base font-bold text-blue-600 mt-4 mb-2 uppercase;
+    @apply text-base text-blue-600 mt-4 mb-2 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose h6 {
-    @apply text-sm font-bold text-blue-600 mt-3 mb-2 uppercase;
+    @apply text-sm text-blue-600 mt-3 mb-2 uppercase;
+    font-weight: 900;
+    font-style: normal;
   }
 
   .prose p {

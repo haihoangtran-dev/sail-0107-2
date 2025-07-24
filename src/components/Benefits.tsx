@@ -78,7 +78,7 @@ const Benefits: React.FC = () => {
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-4 uppercase">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Tại sao chọn Sail Agency?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

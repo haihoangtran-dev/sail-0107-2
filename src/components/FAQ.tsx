@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
     <section id="faq" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-4 uppercase">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Câu hỏi thường gặp
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -72,7 +72,7 @@ const FAQ: React.FC = () => {
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                   className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
-                  <h3 className="text-lg font-bold text-blue-600 pr-4">
+                  <h3 className="text-lg text-blue-600 pr-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                     {faq.question}
                   </h3>
                   {openIndex === index ? (
