@@ -114,7 +114,7 @@ const AdditionalServices: React.FC = () => {
                   <Calculator className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold uppercase">Tư vấn thuế doanh nghiệp</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 uppercase">Tư vấn thuế doanh nghiệp</h3>
                   <p className="text-blue-100">Small Business Tax Consulting</p>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const AdditionalServices: React.FC = () => {
                 ref={useScrollAnimation('fade-up', 300)}
                 className="mb-8"
               >
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+                <h4 className="text-lg font-bold text-blue-600 mb-4">
                   Dịch vụ bao gồm:
                 </h4>
                 <div className="space-y-4">
@@ -144,7 +144,7 @@ const AdditionalServices: React.FC = () => {
                         <service.icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
-                        <h5 className="font-medium text-blue-900 mb-1">
+                        <h5 className="font-bold text-blue-600 mb-1">
                           {service.title}
                         </h5>
                         <p className="text-gray-600 text-sm">
@@ -161,7 +161,7 @@ const AdditionalServices: React.FC = () => {
                 ref={useScrollAnimation('fade-up', 400)}
                 className="mb-8"
               >
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+                <h4 className="text-lg font-bold text-blue-600 mb-4">
                   Lợi ích:
                 </h4>
                 <div className="space-y-2">
@@ -208,7 +208,7 @@ const AdditionalServices: React.FC = () => {
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold uppercase">Hỗ trợ lấy ITIN</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 uppercase">Hỗ trợ lấy ITIN</h3>
                   <p className="text-blue-100">Individual Taxpayer Identification Number</p>
                 </div>
               </div>
@@ -243,7 +243,7 @@ const AdditionalServices: React.FC = () => {
                 ref={useScrollAnimation('fade-up', 300)}
                 className="mb-8"
               >
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+                <h4 className="text-lg font-bold text-blue-600 mb-4">
                   Hỗ trợ trọn gói:
                 </h4>
                 <div className="space-y-4">
@@ -257,7 +257,7 @@ const AdditionalServices: React.FC = () => {
                         <service.icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
-                        <h5 className="font-medium text-blue-900 mb-1">
+                        <h5 className="font-bold text-blue-600 mb-1">
                           {service.title}
                         </h5>
                         <p className="text-gray-600 text-sm">
