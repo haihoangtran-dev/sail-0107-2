@@ -109,7 +109,7 @@ const Testimonials: React.FC = () => {
 
         {/* Stats with background image */}
         <div ref={statsRef} className="mt-16 relative rounded-2xl overflow-hidden">
-          <div className="absolute inset-0">
+          <div className="bg-blue-700 absolute inset-0">
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Business team"
