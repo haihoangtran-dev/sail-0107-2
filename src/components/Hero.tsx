@@ -1,7 +1,14 @@
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Hero: React.FC = () => {
+  const heroContentRef = useScrollAnimation('fade-right')
+  const heroImageRef = useScrollAnimation('fade-left', 200)
+  const benefitsRef = useScrollAnimation('fade-up', 400)
+  const ctaRef = useScrollAnimation('scale-up', 600)
+  const trustRef = useScrollAnimation('fade-in', 800)
+
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -28,12 +35,16 @@ const Hero: React.FC = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div ref={heroContentRef} className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-blue-600 leading-tight">
-                Sở hữu LLC dễ dàng 
+              <h2 className="text-3xl lg:text-5xl text-blue-600 leading-tight uppercase" 
+                style={{ fontWeight: 900, fontStyle: 'normal' }}>
+              </h2>
+              <h2 className="text-3xl lg:text-5xl text-blue-600 uppercase" 
+                style={{ fontWeight: 900, fontStyle: 'normal', lineHeight: 1.2 }}>
+                Sở hữu LLC dễ dàng
                 <span className="text-blue-600"> chỉ trong vài bước</span>
-              </h1>
+              </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Khởi nghiệp tại Mỹ một cách chuyên nghiệp với dịch vụ đăng ký LLC nhanh chóng, 
                 minh bạch và được hỗ trợ pháp lý đầy đủ.
@@ -41,9 +52,9 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Key Benefits */}
-            <div className="space-y-3">
+            <div ref={benefitsRef} className="space-y-3">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className={`flex items-center space-x-3 animate-stagger-${index + 1}`}>
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                   <span className="text-gray-700">{benefit}</span>
                 </div>
@@ -51,7 +62,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="btn-primary flex items-center justify-center space-x-2 group"
@@ -68,19 +79,19 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="pt-8 border-t border-gray-200">
+            <div ref={trustRef} className="pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-500 mb-4">Được tin tưởng bởi hơn 200+ doanh nghiệp</p>
               <div className="flex items-center space-x-8 opacity-60">
-                <div className="text-2xl font-bold text-gray-400">200+</div>
-                <div className="text-2xl font-bold text-gray-400">LLC</div>
-                <div className="text-2xl font-bold text-gray-400">CORP</div>
-                <div className="text-2xl font-bold text-gray-400">INC</div>
+                <div className="text-2xl font-bold text-gray-400 animate-stagger-1">200+</div>
+                <div className="text-2xl font-bold text-gray-400 animate-stagger-2">LLC</div>
+                <div className="text-2xl font-bold text-gray-400 animate-stagger-3">CORP</div>
+                <div className="text-2xl font-bold text-gray-400 animate-stagger-4">INC</div>
               </div>
             </div>
           </div>
 
           {/* Professional Image */}
-          <div className="relative">
+          <div ref={heroImageRef} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/images/hero/SailAgency-Hero.png"

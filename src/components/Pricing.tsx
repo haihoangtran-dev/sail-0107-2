@@ -1,8 +1,13 @@
 import React from 'react'
 import { Check, Calculator, Building2, CreditCard } from 'lucide-react'
 import { PricingPlan } from '../types'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Pricing: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const servicesGridRef = useScrollAnimation('fade-in', 200)
+  const infoRef = useScrollAnimation('fade-up', 400)
+
   const services: PricingPlan[] = [
     {
       name: 'Tư vấn thuế',
@@ -70,8 +75,8 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+        <div ref={titleRef} className="text-center mb-16">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Bảng giá dịch vụ
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -79,11 +84,16 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={servicesGridRef} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = getServiceIcon(index)
+            const animationType = index === 0 ? 'fade-left' : 
+                                 index === 1 ? 'fade-up' : 'fade-right';
+            const serviceRef = useScrollAnimation(animationType, 150 * (index + 1));
+            
             return (
               <div 
+                ref={serviceRef}
                 key={index}
                 className={`relative rounded-2xl border-2 overflow-hidden ${
                   service.popular 
@@ -92,7 +102,10 @@ const Pricing: React.FC = () => {
                 } transition-all duration-300 bg-white`}
               >
                 {/* Icon Header */}
-                <div className="flex justify-center pt-12 pb-6">
+                <div 
+                  ref={useScrollAnimation('scale-up', 200 * (index + 1))}
+                  className="flex justify-center pt-12 pb-6"
+                >
                   <div className={`w-24 h-24 rounded-full flex items-center justify-center ${
                     service.popular 
                       ? 'bg-blue-600' 
@@ -107,8 +120,11 @@ const Pricing: React.FC = () => {
                 </div>
 
                 <div className="px-8 pb-8">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                  <div 
+                    ref={useScrollAnimation('fade-in', 250 * (index + 1))}
+                    className="text-center mb-8"
+                  >
+                    <h3 className="text-2xl font-bold text-blue-600 mb-2">
                       {service.name}
                     </h3>
                     <div className="mb-4">
@@ -153,7 +169,7 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Additional info */}
-        <div className="text-center mt-12 bg-blue-50 rounded-xl p-6">
+        <div ref={infoRef} className="text-center mt-12 bg-blue-50 rounded-xl p-6">
           <p className="mb-2 text-blue-900 font-semibold">
             <strong>Cam kết:</strong> Tất cả dịch vụ đều bao gồm phí chính thức và không có phí ẩn
           </p>
@@ -164,7 +180,7 @@ const Pricing: React.FC = () => {
 
         {/* Service Comparison */}
         <div className="mt-16 bg-gray-50 rounded-2xl p-8 hidden">
-          <h3 className="text-2xl font-bold text-blue-900 text-center mb-8">
+          <h3 className="text-2xl text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             So sánh dịch vụ
           </h3>
           <div className="grid md:grid-cols-3 gap-8 text-center">

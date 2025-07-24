@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState<boolean>(false);
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -61,6 +62,7 @@ const Header: React.FC = () => {
     navigate(path);
     setIsMenuOpen(false);
     setIsServicesOpen(false);
+    setIsMobileServicesOpen(false);
   };
 
   const handleLogoClick = (): void => {
@@ -78,6 +80,7 @@ const Header: React.FC = () => {
       navigate('/');
     }
     setIsMenuOpen(false);
+    setIsMobileServicesOpen(false);
   };
 
   const services = [
@@ -257,20 +260,36 @@ const Header: React.FC = () => {
               </button>
 
               {/* Mobile Services */}
-              <div className="px-3 py-2">
-                <div className="font-medium text-gray-900 mb-2">Dịch vụ</div>
-                <div className="pl-4 space-y-1">
-                  {services.map((service, index) => (
-                    <button
-                      key={index}
-                      onClick={service.action}
-                      className="block w-full text-left py-2 text-sm text-gray-600 hover:text-blue-600"
-                    >
-                      {service.name}
-                    </button>
-                  ))}
+              <div>
+                <button
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                >
+                  <span>Dịch vụ</span>
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-200 ${
+                      isMobileServicesOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+                
+                {isMobileServicesOpen && (
+                  <div className="pl-6 space-y-1 mt-2">
+                    {services.map((service, index) => (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          service.action();
+                          setIsMobileServicesOpen(false);
+                        }}
+                        className="block w-full text-left py-2 text-sm text-gray-600 hover:text-blue-600"
+                      >
+                        {service.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
                 </div>
-              </div>
 
               <button
                 onClick={() => scrollToSection('pricing')}

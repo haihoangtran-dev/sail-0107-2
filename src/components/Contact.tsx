@@ -2,10 +2,16 @@ import React from 'react'
 import { Mail, Send, Facebook, MessageCircle, MapPin } from 'lucide-react'
 import { useForm, ValidationError } from '@formspree/react'
 import StateDropdown from './StateDropdown'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm("mvgrlynw")
   const [selectedState, setSelectedState] = React.useState('')
+  
+  const titleRef = useScrollAnimation('fade-up')
+  const imageRef = useScrollAnimation('fade-left', 200)
+  const formRef = useScrollAnimation('fade-right', 300)
+  const contactInfoRef = useScrollAnimation('fade-up', 400)
 
   if (state.succeeded) {
     return (
@@ -48,8 +54,8 @@ const Contact: React.FC = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom" id="contact" >
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+        <div ref={titleRef} className="text-center mb-16">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Bắt đầu đăng ký LLC ngay hôm nay
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -59,47 +65,59 @@ const Contact: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info with Image */}
-          <div className="">
+          <div>
             {/* Professional Image */}
-            <div className="relative rounded-xl overflow-hidden pb-16">
+            <div 
+              ref={imageRef}
+              className="relative rounded-xl overflow-hidden pb-16"
+            >
               <img 
                 src="images/general/supportCustomer.png"
                 alt="Professional consultation"
-                className="w-full h-auto object-cove "
+                className="w-full h-auto object-cover"
               />
             </div>
 
-            <div>
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">
+            <div ref={contactInfoRef}>
+              <h3 className="text-2xl text-blue-600 mb-6" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                 Thông tin liên hệ
               </h3>
               <div className="space-y-6">
-                <div className="flex items-start space-x-4">
+                <div 
+                  ref={useScrollAnimation('fade-right', 100)}
+                  className="flex items-start space-x-4"
+                >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Địa chỉ</h4>
+                    <h4 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>Địa chỉ</h4>
                     <p className="text-gray-600">12770 Coit Road, Suite 208<br />Dallas, Texas, US</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div 
+                  ref={useScrollAnimation('fade-right', 200)}
+                  className="flex items-start space-x-4"
+                >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Email</h4>
+                    <h4 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>Email</h4>
                     <p className="text-gray-600">ask@sailagency.co</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div 
+                  ref={useScrollAnimation('fade-right', 300)}
+                  className="flex items-start space-x-4"
+                >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Facebook className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Facebook</h4>
+                    <h4 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>Facebook</h4>
                     <a 
                       href="https://fb.com/sailagency" 
                       target="_blank" 
@@ -111,12 +129,15 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+                <div 
+                  ref={useScrollAnimation('fade-right', 400)}
+                  className="flex items-start space-x-4"
+                >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MessageCircle className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Telegram</h4>
+                    <h4 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>Telegram</h4>
                     <a 
                       href="https://t.me/sail_agency" 
                       target="_blank" 
@@ -129,12 +150,15 @@ const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-            </div>
+          </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div ref={formRef} className="bg-white rounded-xl p-8 shadow-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+              <div 
+                ref={useScrollAnimation('fade-left', 100)}
+                className="grid md:grid-cols-2 gap-4"
+              >
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Họ và tên *
@@ -175,7 +199,10 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div 
+                ref={useScrollAnimation('fade-left', 200)}
+                className="grid md:grid-cols-2 gap-4"
+              >
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Số điện thoại
@@ -217,7 +244,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div>
+              <div ref={useScrollAnimation('fade-left', 300)}>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                   Dịch vụ quan tâm
                 </label>
@@ -239,7 +266,7 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              <div>
+              <div ref={useScrollAnimation('fade-left', 400)}>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Tin nhắn
                 </label>
@@ -259,6 +286,7 @@ const Contact: React.FC = () => {
               </div>
 
               <button
+                ref={useScrollAnimation('scale-up', 500)}
                 type="submit"
                 disabled={state.submitting}
                 className="w-full btn-primary flex items-center justify-center space-x-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"

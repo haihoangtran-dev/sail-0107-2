@@ -6,8 +6,12 @@ import {
   Award,
 } from 'lucide-react';
 import { Benefit } from '../types';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Benefits: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const benefitsGridRef = useScrollAnimation('fade-in', 200)
+
   const benefits: Benefit[] = [
     {
       icon: Clock,
@@ -45,12 +49,6 @@ const Benefits: React.FC = () => {
   // Define different color schemes for each benefit
   const colorSchemes = [
     {
-      bg: 'bg-blue-100',
-      hoverBg: 'group-hover:bg-blue-600',
-      icon: 'text-blue-600',
-      hoverIcon: 'group-hover:text-white'
-    },
-    {
       bg: 'bg-green-100',
       hoverBg: 'group-hover:bg-green-600',
       icon: 'text-green-600',
@@ -67,14 +65,20 @@ const Benefits: React.FC = () => {
       hoverBg: 'group-hover:bg-orange-600',
       icon: 'text-orange-600',
       hoverIcon: 'group-hover:text-white'
+    },
+    {
+      bg: 'bg-red-100',
+      hoverBg: 'group-hover:bg-red-600',
+      icon: 'text-red-600',
+      hoverIcon: 'group-hover:text-white'
     }
   ];
 
   return (
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+        <div ref={titleRef} className="text-center mb-16">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Tại sao chọn Sail Agency?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -84,13 +88,17 @@ const Benefits: React.FC = () => {
         </div>
 
         {/* Mobile: Single column, Desktop: 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div ref={benefitsGridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => {
             const colors = colorSchemes[index];
+            const animationType = index % 2 === 0 ? 'fade-left' : 'fade-right';
+            const benefitRef = useScrollAnimation(animationType, 100 * (index + 1));
+            
             return (
               <div
+                ref={benefitRef}
                 key={index}
-                className="group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300"
+                className={`group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300`}
               >
                 {/* Icon */}
                 <div className={`w-16 h-16 ${colors.bg} rounded-xl flex items-center justify-center mx-auto mb-6 ${colors.hoverBg} transition-colors`}>

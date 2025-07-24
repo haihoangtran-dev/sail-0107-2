@@ -1,8 +1,13 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { Testimonial } from '../types';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const testimonialsGridRef = useScrollAnimation('fade-in', 200)
+  const statsRef = useScrollAnimation('scale-up', 400)
+
   const testimonials: Testimonial[] = [
     {
       name: 'Nguyễn Minh Anh',
@@ -33,8 +38,8 @@ const Testimonials: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+        <div ref={titleRef} className="text-center mb-16">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Khách hàng nói gì về chúng tôi
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -43,15 +48,26 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div ref={testimonialsGridRef} className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
+              ref={useScrollAnimation(
+                index === 0 ? 'fade-left' : 
+                index === 1 ? 'fade-up' : 'fade-right', 
+                100 * (index + 1)
+              )}
               key={index}
               className="bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300"
             >
-              <Quote className="w-8 h-8 text-blue-200 mb-4" />
+              <Quote 
+                ref={useScrollAnimation('fade-in', 150 * (index + 1))}
+                className="w-8 h-8 text-blue-200 mb-4" 
+              />
 
-              <div className="flex items-center mb-4">
+              <div 
+                ref={useScrollAnimation('fade-right', 200 * (index + 1))}
+                className="flex items-center mb-4"
+              >
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -60,11 +76,17 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p 
+                ref={useScrollAnimation('fade-up', 250 * (index + 1))}
+                className="text-gray-700 leading-relaxed mb-6"
+              >
                 "{testimonial.content}"
               </p>
 
-              <div className="border-t border-gray-200 pt-4">
+              <div 
+                ref={useScrollAnimation('fade-left', 300 * (index + 1))}
+                className="border-t border-gray-200 pt-4"
+              >
                 <div className="flex items-center space-x-4">
                   <img
                     src={testimonial.avatar}
@@ -86,33 +108,33 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Stats with background image */}
-        <div className="mt-16 relative rounded-2xl overflow-hidden">
+        <div ref={statsRef} className="mt-16 relative rounded-2xl overflow-hidden">
           <div className="absolute inset-0">
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
               alt="Business team"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-blue-900/80"></div>
+            <div className="absolute inset-0 bg-blue-600/90"></div>
           </div>
 
           <div className="relative z-10 py-16 px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
               <div>
                 <div className="text-3xl font-bold mb-2">200+</div>
-                <div className="text-blue-200">LLC đã đăng ký</div>
+                <div className="text-blue-100">LLC đã đăng ký</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">98%</div>
-                <div className="text-blue-200">Khách hàng hài lòng</div>
+                <div className="text-blue-100">Khách hàng hài lòng</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">5 năm</div>
-                <div className="text-blue-200">Kinh nghiệm</div>
+                <div className="text-blue-100">Kinh nghiệm</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200">Hỗ trợ khách hàng</div>
+                <div className="text-blue-100">Hỗ trợ khách hàng</div>
               </div>
             </div>
           </div>

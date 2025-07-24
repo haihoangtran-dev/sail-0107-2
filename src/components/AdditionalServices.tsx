@@ -1,4 +1,5 @@
 import React from 'react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { 
   Calculator, 
   FileText, 
@@ -12,6 +13,12 @@ import {
 } from 'lucide-react'
 
 const AdditionalServices: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const servicesGridRef = useScrollAnimation('fade-in', 200)
+  const taxServiceRef = useScrollAnimation('fade-left', 300)
+  const itinServiceRef = useScrollAnimation('fade-right', 400)
+  const ctaRef = useScrollAnimation('scale-up', 500)
+
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -81,8 +88,8 @@ const AdditionalServices: React.FC = () => {
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+        <div ref={titleRef} className="text-center mb-16">
+          <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Dịch vụ bổ sung chuyên nghiệp
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -91,17 +98,23 @@ const AdditionalServices: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div ref={servicesGridRef} className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Tax Consulting Service */}
-          <div id="tax-consulting" className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div ref={taxServiceRef} id="tax-consulting" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
-            <div className="bg-blue-600 p-8 text-white">
+            <div 
+              ref={useScrollAnimation('fade-down', 100)}
+              className="bg-blue-600 p-8 text-white"
+            >
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                <div 
+                  ref={useScrollAnimation('scale-up', 200)}
+                  className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center"
+                >
                   <Calculator className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Tư vấn thuế doanh nghiệp</h3>
+                  <h3 className="text-2xl text-blue-600 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>Tư vấn thuế doanh nghiệp</h3>
                   <p className="text-blue-100">Small Business Tax Consulting</p>
                 </div>
               </div>
@@ -113,18 +126,25 @@ const AdditionalServices: React.FC = () => {
 
             <div className="p-8">
               {/* Services included */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+              <div 
+                ref={useScrollAnimation('fade-up', 300)}
+                className="mb-8"
+              >
+                <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                   Dịch vụ bao gồm:
                 </h4>
                 <div className="space-y-4">
                   {taxServices.map((service, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                    <div 
+                      key={index} 
+                      ref={useScrollAnimation('fade-right', 100 * (index + 4))}
+                      className="flex items-start space-x-3"
+                    >
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <service.icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
-                        <h5 className="font-medium text-blue-900 mb-1">
+                        <h5 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                           {service.title}
                         </h5>
                         <p className="text-gray-600 text-sm">
@@ -137,13 +157,20 @@ const AdditionalServices: React.FC = () => {
               </div>
 
               {/* Benefits */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+              <div 
+                ref={useScrollAnimation('fade-up', 400)}
+                className="mb-8"
+              >
+                <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                   Lợi ích:
                 </h4>
                 <div className="space-y-2">
                   {taxBenefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-2">
+                    <div 
+                      key={index} 
+                      ref={useScrollAnimation('fade-left', 50 * (index + 8))}
+                      className="flex items-center space-x-2"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{benefit}</span>
                     </div>
@@ -152,7 +179,10 @@ const AdditionalServices: React.FC = () => {
               </div>
 
               {/* Tax Consulting Button */}
-              <div className="mt-8">
+              <div 
+                ref={useScrollAnimation('scale-up', 500)}
+                className="mt-8"
+              >
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-center"
@@ -164,15 +194,21 @@ const AdditionalServices: React.FC = () => {
           </div>
 
           {/* ITIN Service */}
-          <div id="itin-support" className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div ref={itinServiceRef} id="itin-support" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
-            <div className="bg-blue-600 p-8 text-white">
+            <div 
+              ref={useScrollAnimation('fade-down', 100)}
+              className="bg-blue-600 p-8 text-white"
+            >
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center">
+                <div 
+                  ref={useScrollAnimation('scale-up', 200)}
+                  className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center"
+                >
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Hỗ trợ lấy ITIN</h3>
+                  <h3 className="text-2xl text-blue-600 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>Hỗ trợ lấy ITIN</h3>
                   <p className="text-blue-100">Individual Taxpayer Identification Number</p>
                 </div>
               </div>
@@ -203,18 +239,25 @@ const AdditionalServices: React.FC = () => {
               </div>
 
               {/* Services included */}
-              <div className="mb-8">
-                <h4 className="text-lg font-semibold text-blue-900 mb-4">
+              <div 
+                ref={useScrollAnimation('fade-up', 300)}
+                className="mb-8"
+              >
+                <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                   Hỗ trợ trọn gói:
                 </h4>
                 <div className="space-y-4">
                   {itinServices.map((service, index) => (
-                    <div key={index} className="flex items-start space-x-3">
+                    <div 
+                      key={index} 
+                      ref={useScrollAnimation('fade-left', 100 * (index + 4))}
+                      className="flex items-start space-x-3"
+                    >
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <service.icon className="w-5 h-5 text-blue-600" />
                       </div>
                       <div>
-                        <h5 className="font-medium text-blue-900 mb-1">
+                        <h5 className="text-blue-600 mb-1" style={{ fontWeight: 900, fontStyle: 'normal' }}>
                           {service.title}
                         </h5>
                         <p className="text-gray-600 text-sm">
@@ -227,7 +270,10 @@ const AdditionalServices: React.FC = () => {
               </div>
 
               {/* Processing time info */}
-              <div className="bg-gray-50 rounded-lg p-4 mb-6">
+              <div 
+                ref={useScrollAnimation('fade-right', 400)}
+                className="bg-gray-50 rounded-lg p-4 mb-6"
+              >
                 <div className="flex items-center space-x-2 mb-2">
                   <Clock className="w-4 h-4 text-gray-500" />
                   <span className="text-sm font-medium text-gray-700">Thời gian xử lý:</span>
@@ -236,7 +282,10 @@ const AdditionalServices: React.FC = () => {
               </div>
 
               {/* ITIN Button */}
-              <div className="mt-8">
+              <div 
+                ref={useScrollAnimation('scale-up', 500)}
+                className="mt-8"
+              >
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-center"
@@ -251,7 +300,7 @@ const AdditionalServices: React.FC = () => {
         {/* Why choose us */}
         <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg hidden">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">
+            <h3 className="text-2xl text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
               Tại sao chọn Sail Agency cho dịch vụ bổ sung?
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
@@ -300,8 +349,8 @@ const AdditionalServices: React.FC = () => {
         </div>
 
         {/* Final CTA Section */}
-        <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">
+        <div ref={ctaRef} className="mt-16 text-center">
+          <h3 className="text-2xl text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Sẵn sàng bắt đầu?
           </h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
