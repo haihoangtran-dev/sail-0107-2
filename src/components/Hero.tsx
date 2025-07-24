@@ -39,6 +39,8 @@ const Hero: React.FC = () => {
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-5xl text-blue-600 leading-tight uppercase" 
                 style={{ fontWeight: 900, fontStyle: 'normal' }}>
+              <h2 className="text-2xl lg:text-4xl text-blue-600 uppercase" 
+                style={{ fontWeight: 900, fontStyle: 'normal', lineHeight: 1.2 }}>
                 Sở hữu LLC dễ dàng
                 <span className="text-blue-600"> chỉ trong vài bước</span>
               </h2>
