@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
             </div>
 
             <div ref={contactInfoRef}>
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">
+              <h3 className="text-2xl font-bold text-blue-600 mb-6">
                 Thông tin liên hệ
               </h3>
               <div className="space-y-6">
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
                     <MapPin className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Địa chỉ</h4>
+                    <h4 className="font-bold text-blue-600 mb-1">Địa chỉ</h4>
                     <p className="text-gray-600">12770 Coit Road, Suite 208<br />Dallas, Texas, US</p>
                   </div>
                 </div>
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                     <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Email</h4>
+                    <h4 className="font-bold text-blue-600 mb-1">Email</h4>
                     <p className="text-gray-600">ask@sailagency.co</p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const Contact: React.FC = () => {
                     <Facebook className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Facebook</h4>
+                    <h4 className="font-bold text-blue-600 mb-1">Facebook</h4>
                     <a 
                       href="https://fb.com/sailagency" 
                       target="_blank" 
@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                     <MessageCircle className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-blue-900 mb-1">Telegram</h4>
+                    <h4 className="font-bold text-blue-600 mb-1">Telegram</h4>
                     <a 
                       href="https://t.me/sail_agency" 
                       target="_blank" 

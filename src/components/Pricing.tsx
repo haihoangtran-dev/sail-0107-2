@@ -124,7 +124,7 @@ const Pricing: React.FC = () => {
                     ref={useScrollAnimation('fade-in', 250 * (index + 1))}
                     className="text-center mb-8"
                   >
-                    <h3 className="text-2xl font-bold text-blue-900 mb-2">
+                    <h3 className="text-2xl font-bold text-blue-600 mb-2">
                       {service.name}
                     </h3>
                     <div className="mb-4">

@@ -72,7 +72,7 @@ const FAQ: React.FC = () => {
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
                   className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-blue-900 pr-4">
+                  <h3 className="text-lg font-bold text-blue-600 pr-4">
                     {faq.question}
                   </h3>
                   {openIndex === index ? (
