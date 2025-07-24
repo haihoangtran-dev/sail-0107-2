@@ -49,27 +49,27 @@ const Benefits: React.FC = () => {
   // Define different color schemes for each benefit
   const colorSchemes = [
     {
-      bg: 'bg-blue-100',
-      hoverBg: 'group-hover:bg-blue-600',
-      icon: 'text-blue-600',
+      bg: 'bg-green-100',
+      hoverBg: 'group-hover:bg-green-600',
+      icon: 'text-green-600',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-blue-200',
-      hoverBg: 'group-hover:bg-blue-700',
-      icon: 'text-blue-700',
+      bg: 'bg-purple-100',
+      hoverBg: 'group-hover:bg-purple-600',
+      icon: 'text-purple-600',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-blue-100',
-      hoverBg: 'group-hover:bg-blue-800',
-      icon: 'text-blue-800',
+      bg: 'bg-orange-100',
+      hoverBg: 'group-hover:bg-orange-600',
+      icon: 'text-orange-600',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-blue-200',
-      hoverBg: 'group-hover:bg-blue-900',
-      icon: 'text-blue-900',
+      bg: 'bg-red-100',
+      hoverBg: 'group-hover:bg-red-600',
+      icon: 'text-red-600',
       hoverIcon: 'group-hover:text-white'
     }
   ];
