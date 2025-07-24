@@ -140,24 +140,24 @@ const Header: React.FC = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={handleHomeClick}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
             >
-              Trang chủ
+              TRANG CHỦ
             </button>
             <button
               onClick={() => handleNavigation('/about')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
             >
-              Về chúng tôi
+              VỀ CHÚNG TÔI
             </button>
 
             {/* Services Dropdown */}
             <div className="relative services-dropdown">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
               >
-                <span>Dịch vụ</span>
+                <span>DỊCH VỤ</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
                     isServicesOpen ? 'rotate-180' : ''
@@ -174,7 +174,7 @@ const Header: React.FC = () => {
                       onClick={service.action}
                       className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors group"
                     >
-                      <div className="font-medium text-blue-900 group-hover:text-blue-600 transition-colors">
+                      <div className="font-medium text-blue-900 group-hover:text-blue-600 transition-colors uppercase">
                         {service.name}
                       </div>
                       <div className="text-sm text-gray-500 mt-1">
@@ -185,9 +185,9 @@ const Header: React.FC = () => {
                   <div className="border-t border-gray-100 mt-2 pt-2">
                     <button
                       onClick={() => scrollToSection('contact')}
-                      className="w-full px-4 py-2 text-center text-blue-600 hover:text-blue-700 font-medium transition-colors"
+                      className="w-full px-4 py-2 text-center text-blue-600 hover:text-blue-700 font-medium transition-colors uppercase"
                     >
-                      Tư vấn miễn phí
+                      TƯ VẤN MIỄN PHÍ
                     </button>
                   </div>
                 </div>
@@ -196,27 +196,27 @@ const Header: React.FC = () => {
 
             <button
               onClick={() => scrollToSection('pricing')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
             >
-              Bảng giá
+              BẢNG GIÁ
             </button>
              <button
               onClick={() => handleNavigation('/blog')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
             >
-              Blog
+              BLOG
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase"
             >
-              Câu hỏi thường gặp
+              CÂU HỎI THƯỜNG GẶP
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors hidden"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors uppercase hidden"
             >
-              Liên hệ
+              LIÊN HỆ
             </button>
           </nav>
 
@@ -224,9 +224,9 @@ const Header: React.FC = () => {
           <div className="hidden lg:flex items-center">
             <button
               onClick={() => scrollToSection('contact')}
-              className="btn-primary"
+              className="btn-primary uppercase"
             >
-              Bắt đầu ngay
+              BẮT ĐẦU NGAY
             </button>
           </div>
 
@@ -245,26 +245,26 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               <button
                 onClick={handleHomeClick}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
               >
-                Trang chủ
+                TRANG CHỦ
               </button>
               <button
                 onClick={() => handleNavigation('/about')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
               >
-                Về chúng tôi
+                VỀ CHÚNG TÔI
               </button>
 
               {/* Mobile Services */}
               <div className="px-3 py-2">
-                <div className="font-medium text-gray-900 mb-2">Dịch vụ</div>
+                <div className="font-medium text-gray-900 mb-2 uppercase">DỊCH VỤ</div>
                 <div className="pl-4 space-y-1">
                   {services.map((service, index) => (
                     <button
                       key={index}
                       onClick={service.action}
-                      className="block w-full text-left py-2 text-sm text-gray-600 hover:text-blue-600"
+                      className="block w-full text-left py-2 text-sm text-gray-600 hover:text-blue-600 uppercase"
                     >
                       {service.name}
                     </button>
@@ -274,34 +274,34 @@ const Header: React.FC = () => {
 
               <button
                 onClick={() => scrollToSection('pricing')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
               >
-                Bảng giá
+                BẢNG GIÁ
               </button>
              <button
               onClick={() => handleNavigation('/blog')}
-              className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
             >
-              Blog
+              BLOG
             </button>
               <button
                 onClick={() => scrollToSection('faq')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
               >
-                Câu hỏi thường gặp
+                CÂU HỎI THƯỜNG GẶP
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md uppercase"
               >
-                Liên hệ
+                LIÊN HỆ
               </button>
               <div className="pt-2">
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="w-full btn-primary"
+                  className="w-full btn-primary uppercase"
                 >
-                  Bắt đầu ngay
+                  BẮT ĐẦU NGAY
                 </button>
               </div>
             </div>
