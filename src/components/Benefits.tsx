@@ -55,21 +55,21 @@ const Benefits: React.FC = () => {
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-green-100',
-      hoverBg: 'group-hover:bg-green-600',
-      icon: 'text-green-600',
+      bg: 'bg-blue-200',
+      hoverBg: 'group-hover:bg-blue-700',
+      icon: 'text-blue-700',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-purple-100',
-      hoverBg: 'group-hover:bg-purple-600',
-      icon: 'text-purple-600',
+      bg: 'bg-blue-300',
+      hoverBg: 'group-hover:bg-blue-800',
+      icon: 'text-blue-800',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-orange-100',
-      hoverBg: 'group-hover:bg-orange-600',
-      icon: 'text-orange-600',
+      bg: 'bg-blue-100',
+      hoverBg: 'group-hover:bg-blue-900',
+      icon: 'text-blue-900',
       hoverIcon: 'group-hover:text-white'
     }
   ];
