@@ -158,7 +158,7 @@ const Header: React.FC = () => {
             <div className="relative services-dropdown">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="flex items-center space-x-1 text-gray-700 font-medium"
               >
                 <span>Dịch vụ</span>
                 <ChevronDown
