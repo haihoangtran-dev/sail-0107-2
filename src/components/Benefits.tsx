@@ -61,13 +61,13 @@ const Benefits: React.FC = () => {
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-blue-300',
+      bg: 'bg-blue-100',
       hoverBg: 'group-hover:bg-blue-800',
       icon: 'text-blue-800',
       hoverIcon: 'group-hover:text-white'
     },
     {
-      bg: 'bg-blue-100',
+      bg: 'bg-blue-200',
       hoverBg: 'group-hover:bg-blue-900',
       icon: 'text-blue-900',
       hoverIcon: 'group-hover:text-white'
