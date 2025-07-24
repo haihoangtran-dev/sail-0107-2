@@ -38,6 +38,7 @@ const Hero: React.FC = () => {
           <div ref={heroContentRef} className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-5xl font-bold text-blue-600 leading-tight uppercase">
+                <h2 className="text-2xl lg:text-4xl font-bold text-blue-600 leading-tight uppercase">
                 Sở hữu LLC dễ dàng
                 <span className="text-blue-600"> chỉ trong vài bước</span>
               </h2>

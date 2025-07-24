@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
     <section id="faq" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-4 uppercase">
+          <h2 className="text-2xl lg:text-3xl font-bold text-blue-600 mb-4 uppercase">
             Câu hỏi thường gặp
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
