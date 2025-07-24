@@ -158,7 +158,7 @@ const Header: React.FC = () => {
             <div className="relative services-dropdown">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="flex items-center space-x-1 text-gray-700 font-medium"
               >
                 <span>Dịch vụ</span>
                 <ChevronDown
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                       onClick={service.action}
                       className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors group"
                     >
-                      <div className="font-medium text-blue-900 group-hover:text-blue-600 transition-colors">
+                      <div className="font-medium text-blue-900 group-hover:text-blue-600 group-hover:underline transition-colors">
                         {service.name}
                       </div>
                       <div className="text-sm text-gray-500 mt-1">

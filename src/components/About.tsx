@@ -261,8 +261,18 @@ const About: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <value.icon className="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300 ${
+                  index === 0 ? 'bg-green-100 group-hover:bg-green-600' :
+                  index === 1 ? 'bg-purple-100 group-hover:bg-purple-600' :
+                  index === 2 ? 'bg-orange-100 group-hover:bg-orange-600' :
+                  'bg-red-100 group-hover:bg-red-600'
+                }`}>
+                  <value.icon className={`w-10 h-10 transition-colors duration-300 group-hover:text-white ${
+                    index === 0 ? 'text-green-600' :
+                    index === 1 ? 'text-purple-600' :
+                    index === 2 ? 'text-orange-600' :
+                    'text-red-600'
+                  }`} />
                 </div>
                 <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   {value.title}
@@ -413,6 +423,7 @@ const About: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute inset-0 bg-blue-700/90"></div>
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-12">
@@ -524,25 +535,25 @@ const About: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-900 text-white">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="container-custom text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-blue-600">
             Sẵn sàng bắt đầu hành trình kinh doanh?
           </h2>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Hãy để Sail Agency đồng hành cùng bạn trong việc thành lập LLC và
             chinh phục thị trường Mỹ
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={handleContactClick}
-              className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Liên hệ tư vấn miễn phí
             </button>
             <button
               onClick={() => (window.location.href = '/blog')}
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
             >
               Tìm hiểu thêm
             </button>
