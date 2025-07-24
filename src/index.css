@@ -181,6 +181,83 @@
   background: #94a3b8;
 }
 
+/* Scroll Animations */
+.animate-hidden {
+  opacity: 0;
+}
+
+.animate-visible {
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Fade Up Animation */
+.animate-fade-up {
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-fade-up.animate-visible {
+  transform: translateY(0);
+}
+
+/* Fade Down Animation */
+.animate-fade-down {
+  transform: translateY(-30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-fade-down.animate-visible {
+  transform: translateY(0);
+}
+
+/* Fade Left Animation */
+.animate-fade-left {
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-fade-left.animate-visible {
+  transform: translateX(0);
+}
+
+/* Fade Right Animation */
+.animate-fade-right {
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-fade-right.animate-visible {
+  transform: translateX(0);
+}
+
+/* Fade In Animation */
+.animate-fade-in {
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-fade-in.animate-visible {
+  opacity: 1;
+}
+
+/* Scale Up Animation */
+.animate-scale-up {
+  transform: scale(0.95);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-scale-up.animate-visible {
+  transform: scale(1);
+}
+
+/* Stagger Animation Delays */
+.animate-stagger-1 { animation-delay: 100ms; }
+.animate-stagger-2 { animation-delay: 200ms; }
+.animate-stagger-3 { animation-delay: 300ms; }
+.animate-stagger-4 { animation-delay: 400ms; }
+.animate-stagger-5 { animation-delay: 500ms; }
+.animate-stagger-6 { animation-delay: 600ms; }
+
 /* Focus styles for accessibility */
 button:focus,
 a:focus,

@@ -1,8 +1,13 @@
 import React from 'react'
 import { MapPin, FileText, CheckCircle } from 'lucide-react'
 import { ProcessStep } from '../types'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Process: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const stepsRef = useScrollAnimation('fade-up', 200)
+  const ctaRef = useScrollAnimation('fade-up', 400)
+
   const steps: ProcessStep[] = [
     {
       icon: MapPin,
@@ -45,7 +50,7 @@ const Process: React.FC = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div id="process" className="container-custom">
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
             Quy trình đăng ký LLC
           </h2>
@@ -54,10 +59,10 @@ const Process: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div ref={stepsRef} className="relative">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="relative">
+              <div key={index} className={`relative animate-stagger-${index + 1}`}>
                 {/* Image relative rounded-xl overflow-hidden pb-16*/}
                 <div className="relative rounded-xl pb-8">
                   <img 
@@ -102,7 +107,7 @@ const Process: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div ref={ctaRef} className="text-center mt-16">
           <button 
             onClick={() => scrollToSection('contact')}
             className="btn-primary text-lg px-8 py-4"

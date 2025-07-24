@@ -1,8 +1,13 @@
 import React from 'react'
 import { Check, Calculator, Building2, CreditCard } from 'lucide-react'
 import { PricingPlan } from '../types'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Pricing: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const servicesRef = useScrollAnimation('fade-up', 200)
+  const infoRef = useScrollAnimation('fade-up', 400)
+
   const services: PricingPlan[] = [
     {
       name: 'Tư vấn thuế',
@@ -70,7 +75,7 @@ const Pricing: React.FC = () => {
   return (
     <section id="pricing" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
             Bảng giá dịch vụ
           </h2>
@@ -79,13 +84,13 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={servicesRef} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = getServiceIcon(index)
             return (
               <div 
                 key={index}
-                className={`relative rounded-2xl border-2 overflow-hidden ${
+                className={`relative rounded-2xl border-2 overflow-hidden animate-stagger-${index + 1} ${
                   service.popular 
                     ? 'border-blue-600 shadow-xl scale-105' 
                     : 'border-gray-200 hover:border-blue-200 hover:shadow-lg'
@@ -153,7 +158,7 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Additional info */}
-        <div className="text-center mt-12 bg-blue-50 rounded-xl p-6">
+        <div ref={infoRef} className="text-center mt-12 bg-blue-50 rounded-xl p-6">
           <p className="mb-2 text-blue-900 font-semibold">
             <strong>Cam kết:</strong> Tất cả dịch vụ đều bao gồm phí chính thức và không có phí ẩn
           </p>

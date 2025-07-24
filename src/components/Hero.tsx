@@ -1,7 +1,11 @@
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Hero: React.FC = () => {
+  const heroContentRef = useScrollAnimation('fade-right')
+  const heroImageRef = useScrollAnimation('fade-left', 200)
+
   const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -28,7 +32,7 @@ const Hero: React.FC = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="space-y-8">
+          <div ref={heroContentRef} className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold text-blue-600 leading-tight">
                 Sở hữu LLC dễ dàng 
@@ -80,7 +84,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Professional Image */}
-          <div className="relative">
+          <div ref={heroImageRef} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/images/hero/SailAgency-Hero.png"

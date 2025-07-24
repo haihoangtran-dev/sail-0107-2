@@ -2,10 +2,14 @@ import React from 'react'
 import { Mail, Send, Facebook, MessageCircle, MapPin } from 'lucide-react'
 import { useForm, ValidationError } from '@formspree/react'
 import StateDropdown from './StateDropdown'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Contact: React.FC = () => {
   const [state, handleSubmit] = useForm("mvgrlynw")
   const [selectedState, setSelectedState] = React.useState('')
+  
+  const titleRef = useScrollAnimation('fade-up')
+  const contentRef = useScrollAnimation('fade-up', 200)
 
   if (state.succeeded) {
     return (
@@ -48,7 +52,7 @@ const Contact: React.FC = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom" id="contact" >
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
             Bắt đầu đăng ký LLC ngay hôm nay
           </h2>
@@ -57,7 +61,7 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div ref={contentRef} className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info with Image */}
           <div className="">
             {/* Professional Image */}

@@ -6,8 +6,12 @@ import {
   Award,
 } from 'lucide-react';
 import { Benefit } from '../types';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Benefits: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const benefitsRef = useScrollAnimation('fade-up', 200)
+
   const benefits: Benefit[] = [
     {
       icon: Clock,
@@ -73,7 +77,7 @@ const Benefits: React.FC = () => {
   return (
     <section id="services" className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
             Tại sao chọn Sail Agency?
           </h2>
@@ -84,13 +88,13 @@ const Benefits: React.FC = () => {
         </div>
 
         {/* Mobile: Single column, Desktop: 2x2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div ref={benefitsRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {benefits.map((benefit, index) => {
             const colors = colorSchemes[index];
             return (
               <div
                 key={index}
-                className="group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300"
+                className={`group text-center p-8 rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-xl transition-all duration-300 animate-stagger-${index + 1}`}
               >
                 {/* Icon */}
                 <div className={`w-16 h-16 ${colors.bg} rounded-xl flex items-center justify-center mx-auto mb-6 ${colors.hoverBg} transition-colors`}>

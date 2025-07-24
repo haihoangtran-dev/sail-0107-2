@@ -1,8 +1,13 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 import { Testimonial } from '../types';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials: React.FC = () => {
+  const titleRef = useScrollAnimation('fade-up')
+  const testimonialsRef = useScrollAnimation('fade-up', 200)
+  const statsRef = useScrollAnimation('scale-up', 400)
+
   const testimonials: Testimonial[] = [
     {
       name: 'Nguyễn Minh Anh',
@@ -33,7 +38,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div ref={titleRef} className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
             Khách hàng nói gì về chúng tôi
           </h2>
@@ -43,11 +48,11 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div ref={testimonialsRef} className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300"
+              className={`bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300 animate-stagger-${index + 1}`}
             >
               <Quote className="w-8 h-8 text-blue-200 mb-4" />
 
@@ -86,7 +91,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Stats with background image */}
-        <div className="mt-16 relative rounded-2xl overflow-hidden">
+        <div ref={statsRef} className="mt-16 relative rounded-2xl overflow-hidden">
           <div className="absolute inset-0">
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"
