@@ -5,7 +5,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Process: React.FC = () => {
   const titleRef = useScrollAnimation('fade-up')
-  const stepsRef = useScrollAnimation('fade-up', 200)
+  const stepsContainerRef = useScrollAnimation('fade-in', 200)
   const ctaRef = useScrollAnimation('fade-up', 400)
 
   const steps: ProcessStep[] = [
@@ -59,12 +59,19 @@ const Process: React.FC = () => {
           </p>
         </div>
 
-        <div ref={stepsRef} className="relative">
+        <div ref={stepsContainerRef} className="relative">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
-              <div key={index} className={`relative animate-stagger-${index + 1}`}>
+              <div key={index} className="relative">
                 {/* Image relative rounded-xl overflow-hidden pb-16*/}
-                <div className="relative rounded-xl pb-8">
+                <div 
+                  ref={useScrollAnimation(
+                    index === 0 ? 'fade-left' : 
+                    index === 1 ? 'fade-up' : 'fade-right', 
+                    100 * (index + 1)
+                  )}
+                  className="relative rounded-xl pb-8"
+                >
                   <img 
                     src={step.image}
                     alt={step.title}
@@ -80,7 +87,10 @@ const Process: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="text-center space-y-4">
+                <div 
+                  ref={useScrollAnimation('fade-up', 200 * (index + 1))}
+                  className="text-center space-y-4"
+                >
                   <div className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full">
                     Bước {index + 1}
                   </div>

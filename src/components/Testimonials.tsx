@@ -5,7 +5,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Testimonials: React.FC = () => {
   const titleRef = useScrollAnimation('fade-up')
-  const testimonialsRef = useScrollAnimation('fade-up', 200)
+  const testimonialsGridRef = useScrollAnimation('fade-in', 200)
   const statsRef = useScrollAnimation('scale-up', 400)
 
   const testimonials: Testimonial[] = [
@@ -48,15 +48,26 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        <div ref={testimonialsRef} className="grid lg:grid-cols-3 gap-8">
+        <div ref={testimonialsGridRef} className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
+              ref={useScrollAnimation(
+                index === 0 ? 'fade-left' : 
+                index === 1 ? 'fade-up' : 'fade-right', 
+                100 * (index + 1)
+              )}
               key={index}
-              className={`bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300 animate-stagger-${index + 1}`}
+              className="bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300"
             >
-              <Quote className="w-8 h-8 text-blue-200 mb-4" />
+              <Quote 
+                ref={useScrollAnimation('fade-in', 150 * (index + 1))}
+                className="w-8 h-8 text-blue-200 mb-4" 
+              />
 
-              <div className="flex items-center mb-4">
+              <div 
+                ref={useScrollAnimation('fade-right', 200 * (index + 1))}
+                className="flex items-center mb-4"
+              >
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -65,11 +76,17 @@ const Testimonials: React.FC = () => {
                 ))}
               </div>
 
-              <p className="text-gray-700 leading-relaxed mb-6">
+              <p 
+                ref={useScrollAnimation('fade-up', 250 * (index + 1))}
+                className="text-gray-700 leading-relaxed mb-6"
+              >
                 "{testimonial.content}"
               </p>
 
-              <div className="border-t border-gray-200 pt-4">
+              <div 
+                ref={useScrollAnimation('fade-left', 300 * (index + 1))}
+                className="border-t border-gray-200 pt-4"
+              >
                 <div className="flex items-center space-x-4">
                   <img
                     src={testimonial.avatar}

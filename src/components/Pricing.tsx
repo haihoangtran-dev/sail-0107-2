@@ -5,7 +5,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 const Pricing: React.FC = () => {
   const titleRef = useScrollAnimation('fade-up')
-  const servicesRef = useScrollAnimation('fade-up', 200)
+  const servicesGridRef = useScrollAnimation('fade-in', 200)
   const infoRef = useScrollAnimation('fade-up', 400)
 
   const services: PricingPlan[] = [
@@ -84,20 +84,28 @@ const Pricing: React.FC = () => {
           </p>
         </div>
 
-        <div ref={servicesRef} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div ref={servicesGridRef} className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const IconComponent = getServiceIcon(index)
+            const animationType = index === 0 ? 'fade-left' : 
+                                 index === 1 ? 'fade-up' : 'fade-right';
+            const serviceRef = useScrollAnimation(animationType, 150 * (index + 1));
+            
             return (
               <div 
+                ref={serviceRef}
                 key={index}
-                className={`relative rounded-2xl border-2 overflow-hidden animate-stagger-${index + 1} ${
+                className={`relative rounded-2xl border-2 overflow-hidden ${
                   service.popular 
                     ? 'border-blue-600 shadow-xl scale-105' 
                     : 'border-gray-200 hover:border-blue-200 hover:shadow-lg'
                 } transition-all duration-300 bg-white`}
               >
                 {/* Icon Header */}
-                <div className="flex justify-center pt-12 pb-6">
+                <div 
+                  ref={useScrollAnimation('scale-up', 200 * (index + 1))}
+                  className="flex justify-center pt-12 pb-6"
+                >
                   <div className={`w-24 h-24 rounded-full flex items-center justify-center ${
                     service.popular 
                       ? 'bg-blue-600' 
@@ -112,7 +120,10 @@ const Pricing: React.FC = () => {
                 </div>
 
                 <div className="px-8 pb-8">
-                  <div className="text-center mb-8">
+                  <div 
+                    ref={useScrollAnimation('fade-in', 250 * (index + 1))}
+                    className="text-center mb-8"
+                  >
                     <h3 className="text-2xl font-bold text-blue-900 mb-2">
                       {service.name}
                     </h3>
