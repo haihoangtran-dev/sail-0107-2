@@ -38,7 +38,7 @@ const Testimonials: React.FC = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Khách hàng nói gì về chúng tôi
           </h2>
@@ -48,24 +48,24 @@ const Testimonials: React.FC = () => {
           </p>
         </div>
 
-        <div ref={testimonialsGridRef} className="grid lg:grid-cols-3 gap-8">
+        <div ref={testimonialsGridRef as React.RefObject<HTMLDivElement>} className="grid lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               ref={useScrollAnimation(
                 index === 0 ? 'fade-left' : 
                 index === 1 ? 'fade-up' : 'fade-right', 
                 100 * (index + 1)
-              )}
+              ) as React.RefObject<HTMLDivElement>}
               key={index}
               className="bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300"
             >
               <Quote 
-                ref={useScrollAnimation('fade-in', 150 * (index + 1))}
+                ref={useScrollAnimation('fade-in', 150 * (index + 1)) as React.RefObject<HTMLDivElement>}
                 className="w-8 h-8 text-blue-200 mb-4" 
               />
 
               <div 
-                ref={useScrollAnimation('fade-right', 200 * (index + 1))}
+                ref={useScrollAnimation('fade-right', 200 * (index + 1)) as React.RefObject<HTMLDivElement>}
                 className="flex items-center mb-4"
               >
                 {[...Array(testimonial.rating)].map((_, i) => (
@@ -77,14 +77,14 @@ const Testimonials: React.FC = () => {
               </div>
 
               <p 
-                ref={useScrollAnimation('fade-up', 250 * (index + 1))}
+                ref={useScrollAnimation('fade-up', 250 * (index + 1)) as React.RefObject<HTMLDivElement>}
                 className="text-gray-700 leading-relaxed mb-6"
               >
                 "{testimonial.content}"
               </p>
 
               <div 
-                ref={useScrollAnimation('fade-left', 300 * (index + 1))}
+                ref={useScrollAnimation('fade-left', 300 * (index + 1)) as React.RefObject<HTMLDivElement>}
                 className="border-t border-gray-200 pt-4"
               >
                 <div className="flex items-center space-x-4">
@@ -108,7 +108,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         {/* Stats with background image */}
-        <div ref={statsRef} className="mt-16 relative rounded-2xl overflow-hidden">
+        <div ref={statsRef as React.RefObject<HTMLDivElement>} className="mt-16 relative rounded-2xl overflow-hidden">
           <div className="absolute inset-0">
             <img
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200"

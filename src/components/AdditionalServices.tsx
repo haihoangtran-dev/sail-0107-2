@@ -88,7 +88,7 @@ const AdditionalServices: React.FC = () => {
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
         {/* Header */}
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Dịch vụ bổ sung chuyên nghiệp
           </h2>
@@ -98,17 +98,17 @@ const AdditionalServices: React.FC = () => {
           </p>
         </div>
 
-        <div ref={servicesGridRef} className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+        <div ref={servicesGridRef as React.RefObject<HTMLDivElement>} className="grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
           {/* Tax Consulting Service */}
-          <div ref={taxServiceRef} id="tax-consulting" className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div ref={taxServiceRef as React.RefObject<HTMLDivElement>} id="tax-consulting" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
             <div 
-              ref={useScrollAnimation('fade-down', 100)}
+              ref={useScrollAnimation('fade-down', 100) as React.RefObject<HTMLDivElement>}
               className="bg-blue-600 p-8 text-white"
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div 
-                  ref={useScrollAnimation('scale-up', 200)}
+                  ref={useScrollAnimation('scale-up', 200) as React.RefObject<HTMLDivElement>}
                   className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center"
                 >
                   <Calculator className="w-8 h-8 text-white" />
@@ -127,7 +127,7 @@ const AdditionalServices: React.FC = () => {
             <div className="p-8">
               {/* Services included */}
               <div 
-                ref={useScrollAnimation('fade-up', 300)}
+                ref={useScrollAnimation('fade-up', 300) as React.RefObject<HTMLDivElement>}
                 className="mb-8"
               >
                 <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
@@ -137,7 +137,7 @@ const AdditionalServices: React.FC = () => {
                   {taxServices.map((service, index) => (
                     <div 
                       key={index} 
-                      ref={useScrollAnimation('fade-right', 100 * (index + 4))}
+                      ref={useScrollAnimation('fade-right', 100 * (index + 4)) as React.RefObject<HTMLDivElement>}
                       className="flex items-start space-x-3"
                     >
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -158,7 +158,7 @@ const AdditionalServices: React.FC = () => {
 
               {/* Benefits */}
               <div 
-                ref={useScrollAnimation('fade-up', 400)}
+                ref={useScrollAnimation('fade-up', 400) as React.RefObject<HTMLDivElement>}
                 className="mb-8"
               >
                 <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
@@ -168,7 +168,7 @@ const AdditionalServices: React.FC = () => {
                   {taxBenefits.map((benefit, index) => (
                     <div 
                       key={index} 
-                      ref={useScrollAnimation('fade-left', 50 * (index + 8))}
+                      ref={useScrollAnimation('fade-left', 50 * (index + 8)) as React.RefObject<HTMLDivElement>}
                       className="flex items-center space-x-2"
                     >
                       <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
@@ -180,7 +180,7 @@ const AdditionalServices: React.FC = () => {
 
               {/* Tax Consulting Button */}
               <div 
-                ref={useScrollAnimation('scale-up', 500)}
+                ref={useScrollAnimation('scale-up', 500) as React.RefObject<HTMLDivElement>}
                 className="mt-8"
               >
                 <button 
@@ -194,15 +194,15 @@ const AdditionalServices: React.FC = () => {
           </div>
 
           {/* ITIN Service */}
-          <div ref={itinServiceRef} id="itin-support" className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div ref={itinServiceRef as React.RefObject<HTMLDivElement>} id="itin-support" className="bg-white rounded-2xl shadow-lg overflow-hidden">
             {/* Header with icon */}
             <div 
-              ref={useScrollAnimation('fade-down', 100)}
+              ref={useScrollAnimation('fade-down', 100) as React.RefObject<HTMLDivElement>}
               className="bg-blue-600 p-8 text-white"
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div 
-                  ref={useScrollAnimation('scale-up', 200)}
+                  ref={useScrollAnimation('scale-up', 200) as React.RefObject<HTMLDivElement>}
                   className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center"
                 >
                   <CreditCard className="w-8 h-8 text-white" />
@@ -240,7 +240,7 @@ const AdditionalServices: React.FC = () => {
 
               {/* Services included */}
               <div 
-                ref={useScrollAnimation('fade-up', 300)}
+                ref={useScrollAnimation('fade-up', 300) as React.RefObject<HTMLDivElement>}
                 className="mb-8"
               >
                 <h4 className="text-lg text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
@@ -250,7 +250,7 @@ const AdditionalServices: React.FC = () => {
                   {itinServices.map((service, index) => (
                     <div 
                       key={index} 
-                      ref={useScrollAnimation('fade-left', 100 * (index + 4))}
+                      ref={useScrollAnimation('fade-left', 100 * (index + 4)) as React.RefObject<HTMLDivElement>}
                       className="flex items-start space-x-3"
                     >
                       <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -271,7 +271,7 @@ const AdditionalServices: React.FC = () => {
 
               {/* Processing time info */}
               <div 
-                ref={useScrollAnimation('fade-right', 400)}
+                ref={useScrollAnimation('fade-right', 400) as React.RefObject<HTMLDivElement>}
                 className="bg-gray-50 rounded-lg p-4 mb-6"
               >
                 <div className="flex items-center space-x-2 mb-2">
@@ -283,7 +283,7 @@ const AdditionalServices: React.FC = () => {
 
               {/* ITIN Button */}
               <div 
-                ref={useScrollAnimation('scale-up', 500)}
+                ref={useScrollAnimation('scale-up', 500) as React.RefObject<HTMLDivElement>}
                 className="mt-8"
               >
                 <button 
@@ -349,7 +349,7 @@ const AdditionalServices: React.FC = () => {
         </div>
 
         {/* Final CTA Section */}
-        <div ref={ctaRef} className="mt-16 text-center">
+        <div ref={ctaRef as React.RefObject<HTMLDivElement>} className="mt-16 text-center">
           <h3 className="text-2xl text-blue-600 mb-4" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Sẵn sàng bắt đầu?
           </h3>

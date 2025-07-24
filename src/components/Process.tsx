@@ -50,7 +50,7 @@ const Process: React.FC = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div id="process" className="container-custom">
-        <div ref={titleRef} className="text-center mb-16">
+        <div ref={titleRef as React.RefObject<HTMLDivElement>} className="text-center mb-16">
           <h2 className="text-2xl lg:text-3xl text-blue-600 mb-4 uppercase" style={{ fontWeight: 900, fontStyle: 'normal' }}>
             Quy trình đăng ký LLC
           </h2>
@@ -59,7 +59,7 @@ const Process: React.FC = () => {
           </p>
         </div>
 
-        <div ref={stepsContainerRef} className="relative">
+        <div ref={stepsContainerRef as React.RefObject<HTMLDivElement>} className="relative">
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             {steps.map((step, index) => (
               <div key={index} className="relative">
@@ -69,7 +69,7 @@ const Process: React.FC = () => {
                     index === 0 ? 'fade-left' : 
                     index === 1 ? 'fade-up' : 'fade-right', 
                     100 * (index + 1)
-                  )}
+                  ) as React.RefObject<HTMLDivElement>}
                   className="relative rounded-xl pb-8"
                 >
                   <img 
@@ -88,7 +88,7 @@ const Process: React.FC = () => {
 
                 {/* Content */}
                 <div 
-                  ref={useScrollAnimation('fade-up', 200 * (index + 1))}
+                  ref={useScrollAnimation('fade-up', 200 * (index + 1)) as React.RefObject<HTMLDivElement>}
                   className="text-center space-y-4"
                 >
                   <div className="inline-block px-3 py-1 bg-blue-100 text-blue-600 text-sm font-medium rounded-full">
@@ -117,7 +117,7 @@ const Process: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <div ref={ctaRef} className="text-center mt-16">
+        <div ref={ctaRef as React.RefObject<HTMLDivElement>} className="text-center mt-16">
           <button 
             onClick={() => scrollToSection('contact')}
             className="btn-primary text-lg px-8 py-4"

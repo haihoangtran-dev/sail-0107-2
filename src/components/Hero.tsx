@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div ref={heroContentRef} className="space-y-8">
+          <div ref={heroContentRef as React.RefObject<HTMLDivElement>} className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-3xl lg:text-5xl text-blue-600 leading-tight uppercase" 
                 style={{ fontWeight: 900, fontStyle: 'normal' }}>
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Key Benefits */}
-            <div ref={benefitsRef} className="space-y-3">
+            <div ref={benefitsRef as React.RefObject<HTMLDivElement>} className="space-y-3">
               {benefits.map((benefit, index) => (
                 <div key={index} className={`flex items-center space-x-3 animate-stagger-${index + 1}`}>
                   <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4">
+            <div ref={ctaRef as React.RefObject<HTMLDivElement>} className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="btn-primary flex items-center justify-center space-x-2 group"
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div ref={trustRef} className="pt-8 border-t border-gray-200">
+            <div ref={trustRef as React.RefObject<HTMLDivElement>} className="pt-8 border-t border-gray-200">
               <p className="text-sm text-gray-500 mb-4">Được tin tưởng bởi hơn 200+ doanh nghiệp</p>
               <div className="flex items-center space-x-8 opacity-60">
                 <div className="text-2xl font-bold text-gray-400 animate-stagger-1">200+</div>
@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Professional Image */}
-          <div ref={heroImageRef} className="relative">
+          <div ref={heroImageRef as React.RefObject<HTMLDivElement>} className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/images/hero/SailAgency-Hero.png"
