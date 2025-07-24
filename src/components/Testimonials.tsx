@@ -115,26 +115,26 @@ const Testimonials: React.FC = () => {
               alt="Business team"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-blue-900/80"></div>
+            <div className="absolute inset-0 bg-blue-600/90"></div>
           </div>
 
           <div className="relative z-10 py-16 px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
               <div>
                 <div className="text-3xl font-bold mb-2">200+</div>
-                <div className="text-blue-200">LLC đã đăng ký</div>
+                <div className="text-blue-100">LLC đã đăng ký</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">98%</div>
-                <div className="text-blue-200">Khách hàng hài lòng</div>
+                <div className="text-blue-100">Khách hàng hài lòng</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">5 năm</div>
-                <div className="text-blue-200">Kinh nghiệm</div>
+                <div className="text-blue-100">Kinh nghiệm</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-blue-200">Hỗ trợ khách hàng</div>
+                <div className="text-blue-100">Hỗ trợ khách hàng</div>
               </div>
             </div>
           </div>
