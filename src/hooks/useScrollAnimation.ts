@@ -4,7 +4,7 @@ export const useScrollAnimation = (
   animationType: 'fade-up' | 'fade-down' | 'fade-left' | 'fade-right' | 'fade-in' | 'scale-up' = 'fade-up',
   delay: number = 0
 ) => {
-  const elementRef = useRef<HTMLDivElement | null>(null);
+  const elementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const element = elementRef.current;

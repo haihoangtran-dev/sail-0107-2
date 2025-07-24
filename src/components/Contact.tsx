@@ -286,7 +286,7 @@ const Contact: React.FC = () => {
               </div>
 
               <button
-                ref={useScrollAnimation('scale-up', 500) as React.RefObject<HTMLDivElement>}
+                ref={useScrollAnimation('scale-up', 500) as React.RefObject<HTMLButtonElement>}
                 type="submit"
                 disabled={state.submitting}
                 className="w-full btn-primary flex items-center justify-center space-x-2 text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"

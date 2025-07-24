@@ -60,7 +60,7 @@ const Testimonials: React.FC = () => {
               className="bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-shadow duration-300"
             >
               <Quote 
-                ref={useScrollAnimation('fade-in', 150 * (index + 1)) as React.RefObject<HTMLDivElement>}
+                ref={useScrollAnimation('fade-in', 150 * (index + 1)) as React.RefObject<SVGSVGElement>}
                 className="w-8 h-8 text-blue-200 mb-4" 
               />
 
