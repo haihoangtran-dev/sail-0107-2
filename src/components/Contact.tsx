@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
     <section className="section-padding bg-gray-50">
       <div className="container-custom" id="contact" >
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 uppercase">
             Bắt đầu đăng ký LLC ngay hôm nay
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

@@ -89,7 +89,7 @@ const AdditionalServices: React.FC = () => {
       <div className="container-custom">
         {/* Header */}
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 uppercase">
             Dịch vụ bổ sung chuyên nghiệp
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -114,7 +114,7 @@ const AdditionalServices: React.FC = () => {
                   <Calculator className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Tư vấn thuế doanh nghiệp</h3>
+                  <h3 className="text-2xl font-bold uppercase">Tư vấn thuế doanh nghiệp</h3>
                   <p className="text-blue-100">Small Business Tax Consulting</p>
                 </div>
               </div>
@@ -208,7 +208,7 @@ const AdditionalServices: React.FC = () => {
                   <CreditCard className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold">Hỗ trợ lấy ITIN</h3>
+                  <h3 className="text-2xl font-bold uppercase">Hỗ trợ lấy ITIN</h3>
                   <p className="text-blue-100">Individual Taxpayer Identification Number</p>
                 </div>
               </div>
