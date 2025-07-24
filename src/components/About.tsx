@@ -261,8 +261,18 @@ const About: React.FC = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
-                  <value.icon className="w-10 h-10 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-colors duration-300 ${
+                  index === 0 ? 'bg-green-100 group-hover:bg-green-600' :
+                  index === 1 ? 'bg-purple-100 group-hover:bg-purple-600' :
+                  index === 2 ? 'bg-orange-100 group-hover:bg-orange-600' :
+                  'bg-red-100 group-hover:bg-red-600'
+                }`}>
+                  <value.icon className={`w-10 h-10 transition-colors duration-300 group-hover:text-white ${
+                    index === 0 ? 'text-green-600' :
+                    index === 1 ? 'text-purple-600' :
+                    index === 2 ? 'text-orange-600' :
+                    'text-red-600'
+                  }`} />
                 </div>
                 <h3 className="text-xl font-semibold text-blue-900 mb-3">
                   {value.title}
