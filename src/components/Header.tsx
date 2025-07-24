@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                       onClick={service.action}
                       className="w-full px-4 py-3 text-left hover:bg-gray-50 transition-colors group"
                     >
-                      <div className="font-medium text-blue-900 group-hover:text-blue-600 transition-colors">
+                      <div className="font-medium text-blue-900 group-hover:text-blue-600 group-hover:underline transition-colors">
                         {service.name}
                       </div>
                       <div className="text-sm text-gray-500 mt-1">
