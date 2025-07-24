@@ -89,7 +89,7 @@ const AdditionalServices: React.FC = () => {
       <div className="container-custom">
         {/* Header */}
         <div ref={titleRef} className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-4 uppercase">
+          <h2 className="text-3xl lg:text-4xl font-bold text-blue-600 mb-4 uppercase">
             Dịch vụ bổ sung chuyên nghiệp
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -300,7 +300,7 @@ const AdditionalServices: React.FC = () => {
         {/* Why choose us */}
         <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg hidden">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">
+            <h3 className="text-2xl font-bold text-blue-600 mb-4">
               Tại sao chọn Sail Agency cho dịch vụ bổ sung?
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
@@ -350,7 +350,7 @@ const AdditionalServices: React.FC = () => {
 
         {/* Final CTA Section */}
         <div ref={ctaRef} className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">
+          <h3 className="text-2xl font-bold text-blue-600 mb-4">
             Sẵn sàng bắt đầu?
           </h3>
           <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
