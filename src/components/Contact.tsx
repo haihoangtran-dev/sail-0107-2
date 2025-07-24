@@ -74,7 +74,7 @@ const Contact: React.FC = () => {
               <img 
                 src="images/general/supportCustomer.png"
                 alt="Professional consultation"
-                className="w-full h-auto object-cove "
+                className="w-full h-auto object-cover"
               />
             </div>
 
@@ -316,5 +316,3 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
-  )
-}
