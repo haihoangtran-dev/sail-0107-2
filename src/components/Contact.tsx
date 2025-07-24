@@ -80,7 +80,6 @@ const Contact: React.FC = () => {
 
             <div ref={contactInfoRef}>
               <h3 className="text-2xl font-bold text-blue-900 mb-6">
-              <h3 className="text-2xl font-bold text-blue-600 mb-6">
                 Thông tin liên hệ
               </h3>
               <div className="space-y-6">
