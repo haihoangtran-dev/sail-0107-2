@@ -37,10 +37,10 @@ const Hero: React.FC = () => {
           {/* Content */}
           <div ref={heroContentRef} className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-blue-600 leading-tight uppercase">
+              <h2 className="text-4xl lg:text-6xl font-bold text-blue-600 leading-tight uppercase">
                 Sở hữu LLC dễ dàng 
                 <span className="text-blue-600"> chỉ trong vài bước</span>
-              </h1>
+              </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Khởi nghiệp tại Mỹ một cách chuyên nghiệp với dịch vụ đăng ký LLC nhanh chóng, 
                 minh bạch và được hỗ trợ pháp lý đầy đủ.
