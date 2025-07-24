@@ -423,6 +423,7 @@ const About: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
+        <div className="absolute inset-0 bg-blue-700/90"></div>
 
         <div className="container-custom relative z-10">
           <div className="text-center mb-12">
