@@ -42,6 +42,7 @@ const Hero: React.FC = () => {
                 Sở hữu LLC dễ dàng
                 <span className="text-blue-600"> chỉ trong vài bước</span>
               </h2>
+              </h2>
               <p className="text-xl text-gray-600 leading-relaxed">
                 Khởi nghiệp tại Mỹ một cách chuyên nghiệp với dịch vụ đăng ký LLC nhanh chóng, 
                 minh bạch và được hỗ trợ pháp lý đầy đủ.
